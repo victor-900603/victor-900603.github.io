@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor's Resume</title>
+    <script type="module" src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="#about" id="about-link" class="nav-item">About</a>
+        <a href="#education" id="education-link" class="nav-item">Education</a>
+        <a href="#internships" id="internships-link" class="nav-item">Internships</a>
+        <a href="#certificate" id="certificate-link" class="nav-item">Certificate</a>
+        <a href="#skill" id="skill-link" class="nav-item">Skill</a>
+        <a href="#expertise" id="expertise-link" class="nav-item">Expertise</a>
+        <a href="#contact" id="contact-link" class="nav-item">Contact</a>
+
+        <div id="indicator" class="indicator"></div>
+    </nav>
+    
+    <main class="main">
+        <section id="about" class="about-section">
+            <div class="resume-card">
+                <img src="src/portrait.png" class="portrait" alt="">
+                <div class="content">
+                    <h1 class="name">諶昱維<span class="eng-name"> (Yu-Wei, Chen)</span></h1>
+                    <div class="divider"></div>
+
+                    <div class="item">
+                        <h3 class="item-title">暱稱</h3>
+                        <p class="item-content">Victor</p>
+                    </div>
+                    <div class="item">
+                        <h3 class="item-title">年齡</h3>
+                        <p class="item-content" id="age" data-birth="2001-06-03"></p>
+                    </div>
+                    <div class="item">
+                        <h3 class="item-title">電子郵件</h3>
+                        <p class="item-content">victor.aimhigh0603@gmail.com</p>
+                    </div>
+                    <div class="item">
+                        <h3 class="item-title">電話</h3>
+                        <p class="item-content">0958-XXX-031</p>
+                    </div>
+                    <div class="item">
+                        <h3 class="item-title">學歷</h3>
+                        <p class="item-content">國立陽明交通大學 資訊管理與財務金融學系財務金融碩士班 </p>
+                    </div>
+                    <div class="item">
+                        <h3 class="item-title">程式專長</h3>
+                        <p class="item-content">資料分析、機器學習、網路爬蟲、資料庫操作</p>
+                    </div>
+                    <div class="item">
+                        <h3 class="item-title">財金能力</h3>
+                        <p class="item-content">財務報表分析、投資組合理論、衍生性金融商品</p>
+                    </div>
+                    <div class="item">
+                        <h3 class="item-title">目標</h3>
+                        <p class="item-content">數據科學家 / 機器學習工程師 / 財務顧問 / 理財專員</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="education" class="education-section">
+            <h1 class="section-title">求學經歷</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <label class="timeline-label"></label>
+                    <p class="timeline-period">就讀中</p>
+                    <h2 class="timeline-title">國立陽明交通大學</h2>
+                    <h3 class="timeline-subtitle">資訊管理與財務金融學系財務金融碩士班 日間就讀中</h3>
+                </div>
+                <div class="timeline-item">
+                    <label class="timeline-label"></label>
+                    <p class="timeline-period">2020 / 09 - 2024 / 06</p>
+                    <h2 class="timeline-title">國立臺北科技大學</h2>
+                    <h3 class="timeline-subtitle">資訊與財金管理系 學士畢業</h3>
+                </div>
+            </div>
+        </section>
+        <section id="internships" class="internships-section">
+            <h1 class="section-title">實習經歷</h1>
+            <div class="timeline dark-bg-timeline">
+                <div class="timeline-item">
+                    <label class="timeline-label"></label>
+                    <p class="timeline-period">2024 / 04 - 2024 / 10</p>
+                    <h2 class="timeline-title">財團法人資訊工業策進會</h2>
+                    <h3 class="timeline-subtitle">工讀生</h3>
+                    <p class="timeline-description"></p>
+                </div>
+                <div class="timeline-item">
+                    <label class="timeline-label"></label>
+                    <p class="timeline-period">2023 / 11 - 2024 / 09</p>
+                    <h2 class="timeline-title">大數軟體有限公司</h2>
+                    <h3 class="timeline-subtitle">網路爬蟲實習生</h3>
+                </div>
+                <div class="timeline-item">
+                    <label class="timeline-label"></label>
+                    <p class="timeline-period">2023 / 07 - 2023 / 08</p>
+                    <h2 class="timeline-title">財團法人資訊工業策進會</h2>
+                    <h3 class="timeline-subtitle">實習生</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificate" class="certificate-section">
+            <h1 class="section-title">證照</h1>
+            <h2 class="board-title">金融財會</h2>
+            <ul class="borad-list">
+                <li>專技普考記帳士</li>
+                <li>證券商高級業務員</li>
+                <li>證券商業務員</li>
+                <li>投信投顧業務員</li>
+                <li>期貨商業務員</li>
+                <li>信託業業務員</li>
+                <li>金融科技力知識檢定</li>
+                <li>金融市場常識與職業道德</li>
+            </ul>
+        </section>
+
+        <section id="skill" class="skill-section">
+            <h1 class="section-title">技能</h1>
+            <h2 class="board-title">程式語言</h2>
+            <div class="board-content">
+                <div class="borad-item">
+                    <img src="src/skill/Python.png" alt="Python">
+                    <p class="board-item-name">Python</p>
+                </div>
+                <div class="borad-item">
+                    <img src="src/skill/JavaScript.png" alt="JavaScript">
+                    <p class="board-item-name">JavaScript</p>
+                </div>
+            </div>
+            <h2 class="board-title">前端技術</h2>
+            <div class="board-content">
+                <div class="borad-item">
+                    <img src="src/skill/HTML5.png" alt="HTML5">
+                    <p class="board-item-name">HTML5</p>
+                </div>
+                <div class="borad-item">
+                    <img src="src/skill/CSS.png" alt="CSS">
+                    <p class="board-item-name">CSS</p>
+                </div>       
+                <div class="borad-item">
+                    <img src="src/skill/React.png" alt="React">
+                    <p class="board-item-name">React</p>
+                </div>     
+            </div>
+            <h2 class="board-title">資料庫</h2>
+            <div class="board-content">
+                <div class="borad-item">
+                    <img src="src/skill/MongoDB.png" alt="MongoDB">
+                    <p class="board-item-name">MongoDB</p>
+                </div>     
+                <div class="borad-item">
+                    <img src="src/skill/MySQL.png" alt="MySQL">
+                    <p class="board-item-name">MySQL</p>
+                </div>     
+            </div>
+
+            <h2 class="board-title">工具</h2>
+            <div class="board-content">
+                <div class="borad-item">
+                    <img src="src/skill/Git.png" alt="Git">
+                    <p class="board-item-name">Git</p>
+                </div>     
+                <div class="borad-item">
+                    <img src="src/skill/Github.png" alt="Github">
+                    <p class="board-item-name">Github</p>
+                </div>     
+                <div class="borad-item">
+                    <img src="src/skill/Docker.png" alt="Docker">
+                    <p class="board-item-name">Docker</p>
+                </div>   
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
