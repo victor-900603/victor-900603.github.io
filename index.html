@@ -1,186 +1,526 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor's Resume</title>
-    <script type="module" src="script.js"></script>
+    <meta name="description" content="諶昱維 (Victor Chen) - 資料科學家 / 機器學習工程師 / 財務金融碩士 履歷網站">
+    <meta name="keywords" content="Victor, 諶昱維, Resume, 履歷, 資料科學, 機器學習, 財務金融, NYCU">
+    <meta name="author" content="Yu-Wei Chen (Victor)">
+    <meta property="og:title" content="Victor Chen | Resume">
+    <meta property="og:description" content="資料科學 × 財務金融 — 用資料驅動決策">
+    <meta property="og:type" content="website">
+    <title>Victor Chen | Resume</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
 </head>
 <body>
-    <nav class="nav">
-        <a href="#about" id="about-link" class="nav-item">About</a>
-        <a href="#education" id="education-link" class="nav-item">Education</a>
-        <a href="#internships" id="internships-link" class="nav-item">Internships</a>
-        <a href="#certificate" id="certificate-link" class="nav-item">Certificate</a>
-        <a href="#skill" id="skill-link" class="nav-item">Skill</a>
-        <a href="#expertise" id="expertise-link" class="nav-item">Expertise</a>
-        <a href="#contact" id="contact-link" class="nav-item">Contact</a>
+    <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading...</p>
+    </div>
 
-        <div id="indicator" class="indicator"></div>
+    <button id="back-to-top" class="back-to-top" aria-label="回到頂部">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="切換深色模式">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button id="lang-toggle" class="lang-toggle" aria-label="切換語言">
+        <i class="fas fa-globe"></i>
+        <span id="lang-label">EN</span>
+    </button>
+
+    <nav class="nav" id="navbar">
+        <div class="nav-brand">
+            <span class="brand-text">V</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about" id="about-link" class="nav-item">
+                <i class="fas fa-user"></i><span data-i18n="nav.about">About</span>
+            </a>
+            <a href="#education" id="education-link" class="nav-item">
+                <i class="fas fa-graduation-cap"></i><span data-i18n="nav.education">Education</span>
+            </a>
+            <a href="#internships" id="internships-link" class="nav-item">
+                <i class="fas fa-briefcase"></i><span data-i18n="nav.internships">Internships</span>
+            </a>
+            <a href="#projects" id="projects-link" class="nav-item">
+                <i class="fas fa-code"></i><span data-i18n="nav.projects">Projects</span>
+            </a>
+            <a href="#certificate" id="certificate-link" class="nav-item">
+                <i class="fas fa-certificate"></i><span data-i18n="nav.certificate">Certificate</span>
+            </a>
+            <a href="#skill" id="skill-link" class="nav-item">
+                <i class="fas fa-cogs"></i><span data-i18n="nav.skill">Skill</span>
+            </a>
+            <a href="#expertise" id="expertise-link" class="nav-item">
+                <i class="fas fa-chart-line"></i><span data-i18n="nav.expertise">Expertise</span>
+            </a>
+            <a href="#contact" id="contact-link" class="nav-item">
+                <i class="fas fa-envelope"></i><span data-i18n="nav.contact">Contact</span>
+            </a>
+            <div id="indicator" class="indicator"></div>
+        </div>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="選單">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
-    
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
     <main class="main">
+        <!-- ===== ABOUT ===== -->
         <section id="about" class="about-section">
-            <div class="resume-card">
-                <img src="src/portrait.png" class="portrait" alt="">
+            <div class="particles" id="particles"></div>
+            <div class="resume-card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="portrait-wrapper">
+                    <img src="src/portrait.png" class="portrait" alt="Victor Chen 個人照片" loading="lazy">
+                    <div class="portrait-overlay">
+                        <div class="social-links">
+                            <a href="mailto:victor.aimhigh0603@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/victor-900603" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
                 <div class="content">
-                    <h1 class="name">諶昱維<span class="eng-name"> (Yu-Wei, Chen)</span></h1>
+                    <h1 class="name">
+                        <span data-i18n="about.name">諶昱維</span>
+                        <span class="eng-name" data-i18n="about.engName">(Yu-Wei, Chen)</span>
+                    </h1>
+                    <p class="tagline" id="typed-tagline"></p>
                     <div class="divider"></div>
 
-                    <div class="item">
-                        <h3 class="item-title">暱稱</h3>
-                        <p class="item-content">Victor</p>
-                    </div>
-                    <div class="item">
-                        <h3 class="item-title">年齡</h3>
-                        <p class="item-content" id="age" data-birth="2001-06-03"></p>
-                    </div>
-                    <div class="item">
-                        <h3 class="item-title">電子郵件</h3>
-                        <p class="item-content">victor.aimhigh0603@gmail.com</p>
-                    </div>
-                    <div class="item">
-                        <h3 class="item-title">電話</h3>
-                        <p class="item-content">0958-XXX-031</p>
-                    </div>
-                    <div class="item">
-                        <h3 class="item-title">學歷</h3>
-                        <p class="item-content">國立陽明交通大學 資訊管理與財務金融學系財務金融碩士班 </p>
-                    </div>
-                    <div class="item">
-                        <h3 class="item-title">程式專長</h3>
-                        <p class="item-content">資料分析、機器學習、網路爬蟲、資料庫操作</p>
-                    </div>
-                    <div class="item">
-                        <h3 class="item-title">財金能力</h3>
-                        <p class="item-content">財務報表分析、投資組合理論、衍生性金融商品</p>
-                    </div>
-                    <div class="item">
-                        <h3 class="item-title">目標</h3>
-                        <p class="item-content">數據科學家 / 機器學習工程師 / 財務顧問 / 理財專員</p>
+                    <div class="info-grid">
+                        <div class="item">
+                            <i class="fas fa-id-badge item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.nickname.label">暱稱</h3>
+                                <p class="item-content" data-i18n="about.nickname.value">Victor</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-birthday-cake item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.age.label">年齡</h3>
+                                <p class="item-content" id="age" data-birth="2001-06-03"></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-envelope item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.email.label">電子郵件</h3>
+                                <p class="item-content">victor.aimhigh0603@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-phone item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.phone.label">電話</h3>
+                                <p class="item-content">0958-XXX-031</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-university item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.edu.label">學歷</h3>
+                                <p class="item-content" data-i18n="about.edu.value">國立陽明交通大學 資管財金碩士班</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-laptop-code item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.coding.label">程式專長</h3>
+                                <p class="item-content" data-i18n="about.coding.value">資料分析、機器學習、網路爬蟲、資料庫</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-coins item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.finance.label">財金能力</h3>
+                                <p class="item-content" data-i18n="about.finance.value">財報分析、投資組合、衍生性商品</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-bullseye item-icon"></i>
+                            <div>
+                                <h3 class="item-title" data-i18n="about.goal.label">目標</h3>
+                                <p class="item-content" data-i18n="about.goal.value">Data Scientist / ML Engineer / FinTech</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="scroll-hint">
+                <span data-i18n="about.scrollHint">向下滾動</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </section>
-    
+
+        <!-- ===== EDUCATION ===== -->
         <section id="education" class="education-section">
-            <h1 class="section-title">求學經歷</h1>
-            <div class="timeline">
+            <h1 class="section-title" data-aos="fade-right"><i class="fas fa-graduation-cap"></i> <span data-i18n="education.title">求學經歷</span></h1>
+            <div class="timeline" data-aos="fade-up">
                 <div class="timeline-item">
                     <label class="timeline-label"></label>
-                    <p class="timeline-period">就讀中</p>
-                    <h2 class="timeline-title">國立陽明交通大學</h2>
-                    <h3 class="timeline-subtitle">資訊管理與財務金融學系財務金融碩士班 日間就讀中</h3>
+                    <div class="timeline-content">
+                        <p class="timeline-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="education.nycu.period">2025 / 09 - 就讀中</span></p>
+                        <h2 class="timeline-title" data-i18n="education.nycu.name">國立陽明交通大學</h2>
+                        <h3 class="timeline-subtitle" data-i18n="education.nycu.dept">資訊管理與財務金融學系財務金融碩士班</h3>
+                        <div class="timeline-tags">
+                            <span class="tag" data-i18n="education.nycu.tag1">財務金融</span>
+                            <span class="tag" data-i18n="education.nycu.tag2">資料科學</span>
+                            <span class="tag" data-i18n="education.nycu.tag3">機器學習</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <label class="timeline-label"></label>
-                    <p class="timeline-period">2020 / 09 - 2024 / 06</p>
-                    <h2 class="timeline-title">國立臺北科技大學</h2>
-                    <h3 class="timeline-subtitle">資訊與財金管理系 學士畢業</h3>
+                    <div class="timeline-content">
+                        <p class="timeline-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="education.ntut.period">2020 / 09 - 2024 / 06</span></p>
+                        <h2 class="timeline-title" data-i18n="education.ntut.name">國立臺北科技大學</h2>
+                        <h3 class="timeline-subtitle" data-i18n="education.ntut.dept">資訊與財金管理系 學士畢業</h3>
+                        <div class="timeline-tags">
+                            <span class="tag" data-i18n="education.ntut.tag1">資訊管理</span>
+                            <span class="tag" data-i18n="education.ntut.tag2">財金管理</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- ===== INTERNSHIPS ===== -->
         <section id="internships" class="internships-section">
-            <h1 class="section-title">實習經歷</h1>
-            <div class="timeline dark-bg-timeline">
+            <h1 class="section-title" data-aos="fade-right"><i class="fas fa-briefcase"></i> <span data-i18n="internships.title">實習經歷</span></h1>
+            <div class="timeline" data-aos="fade-up">
                 <div class="timeline-item">
                     <label class="timeline-label"></label>
-                    <p class="timeline-period">2024 / 04 - 2024 / 10</p>
-                    <h2 class="timeline-title">財團法人資訊工業策進會</h2>
-                    <h3 class="timeline-subtitle">工讀生</h3>
-                    <p class="timeline-description"></p>
+                    <div class="timeline-content">
+                        <p class="timeline-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="internships.shenyi.period">2025 / 09 -</span></p>
+                        <h2 class="timeline-title" data-i18n="internships.shenyi.name">伸易自主健康股份有限公司</h2>
+                        <h3 class="timeline-subtitle" data-i18n="internships.shenyi.role">全端工程師</h3>
+                        <p class="timeline-description" data-i18n="internships.shenyi.desc">負責前端網頁與後端開發，協助整合多個模組並優化系統效能</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Full-Stack</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <label class="timeline-label"></label>
-                    <p class="timeline-period">2023 / 11 - 2024 / 09</p>
-                    <h2 class="timeline-title">大數軟體有限公司</h2>
-                    <h3 class="timeline-subtitle">網路爬蟲實習生</h3>
+                    <div class="timeline-content">
+                        <p class="timeline-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="internships.iii2.period">2024 / 04 - 2024 / 10</span></p>
+                        <h2 class="timeline-title" data-i18n="internships.iii2.name">財團法人資訊工業策進會</h2>
+                        <h3 class="timeline-subtitle" data-i18n="internships.iii2.role">工讀生</h3>
+                        <p class="timeline-description" data-i18n="internships.iii2.desc">協助進行資訊系統維護與開發，參與多個專案的前端與後端整合工作</p>
+                        <div class="timeline-tags">
+                            <span class="tag" data-i18n="internships.iii2.tag1">系統維護</span>
+                            <span class="tag" data-i18n="internships.iii2.tag2">前後端整合</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <label class="timeline-label"></label>
-                    <p class="timeline-period">2023 / 07 - 2023 / 08</p>
-                    <h2 class="timeline-title">財團法人資訊工業策進會</h2>
-                    <h3 class="timeline-subtitle">實習生</h3>
+                    <div class="timeline-content">
+                        <p class="timeline-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="internships.bigdata.period">2023 / 11 - 2024 / 10</span></p>
+                        <h2 class="timeline-title" data-i18n="internships.bigdata.name">大數軟體有限公司</h2>
+                        <h3 class="timeline-subtitle" data-i18n="internships.bigdata.role">網路爬蟲實習生</h3>
+                        <p class="timeline-description" data-i18n="internships.bigdata.desc">運用 Python 結合 Celery 構建分佈式非同步任務處理系統，並採用 RabbitMQ 作為 Message Broker。針對數百個新聞與部落格網站開發專屬爬蟲腳本，成功突破 Cloudflare 等進階反爬蟲機制，實現大規模網頁的穩定並行抓取與資料清洗。</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Celery</span>
+                            <span class="tag">RabbitMQ</span>
+                            <span class="tag">Web Scraping</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <label class="timeline-label"></label>
+                    <div class="timeline-content">
+                        <p class="timeline-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="internships.iii1.period">2023 / 07 - 2023 / 08</span></p>
+                        <h2 class="timeline-title" data-i18n="internships.iii1.name">財團法人資訊工業策進會</h2>
+                        <h3 class="timeline-subtitle" data-i18n="internships.iii1.role">實習生</h3>
+                        <p class="timeline-description" data-i18n="internships.iii1.desc">協助進行資訊系統維護與開發，參與多個專案的前端與後端整合工作</p>
+                        <div class="timeline-tags">
+                            <span class="tag" data-i18n="internships.iii1.tag1">系統開發</span>
+                            <span class="tag" data-i18n="internships.iii1.tag2">專案協作</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="projects-section">
+            <h1 class="section-title" data-aos="fade-right"><i class="fas fa-code"></i> <span data-i18n="projects.title">專案作品</span></h1>
+            <div class="projects-grid" data-aos="fade-up">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-spider"></i></div>
+                    <h3 class="project-title" data-i18n="projects.crawler.title">分佈式網路爬蟲系統</h3>
+                    <p class="project-desc" data-i18n="projects.crawler.desc">基於 Python + Celery + RabbitMQ 的大規模分佈式爬蟲架構，支援反爬蟲機制突破與資料清洗</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Celery</span><span>RabbitMQ</span><span>Docker</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="project-title" data-i18n="projects.finance.title">財務資料分析平台</h3>
+                    <p class="project-desc" data-i18n="projects.finance.desc">串接金融 API 進行即時財報分析，結合機器學習模型預測股票走勢</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>React</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-globe"></i></div>
+                    <h3 class="project-title" data-i18n="projects.portfolio.title">個人履歷網站</h3>
+                    <p class="project-desc" data-i18n="projects.portfolio.desc">使用純 HTML/CSS/JS 搭配動畫效果打造互動式個人履歷，支援深色模式與 RWD</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>RWD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATE ===== -->
         <section id="certificate" class="certificate-section">
-            <h1 class="section-title">證照</h1>
-            <h2 class="board-title">金融財會</h2>
-            <ul class="borad-list">
-                <li>專技普考記帳士</li>
-                <li>證券商高級業務員</li>
-                <li>證券商業務員</li>
-                <li>投信投顧業務員</li>
-                <li>期貨商業務員</li>
-                <li>信託業業務員</li>
-                <li>金融科技力知識檢定</li>
-                <li>金融市場常識與職業道德</li>
-            </ul>
+            <h1 class="section-title" data-aos="fade-right"><i class="fas fa-certificate"></i> <span data-i18n="certificate.title">證照</span></h1>
+            <div class="cert-container" data-aos="fade-up">
+                <h2 class="board-title"><i class="fas fa-landmark"></i> <span data-i18n="certificate.category">金融財會</span></h2>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert1">專技普考記帳士</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert2">證券商高級業務員</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert3">證券商業務員</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert4">投信投顧業務員</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert5">期貨商業務員</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert6">信託業業務員</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert7">金融科技力知識檢定</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-award cert-icon"></i>
+                        <span data-i18n="certificate.cert8">金融市場常識與職業道德</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- ===== SKILL ===== -->
         <section id="skill" class="skill-section">
-            <h1 class="section-title">技能</h1>
-            <h2 class="board-title">程式語言</h2>
-            <div class="board-content">
-                <div class="borad-item">
-                    <img src="src/skill/Python.png" alt="Python">
-                    <p class="board-item-name">Python</p>
+            <h1 class="section-title" data-aos="fade-right"><i class="fas fa-cogs"></i> <span data-i18n="skill.title">技能</span></h1>
+
+            <div class="skill-category" data-aos="fade-up">
+                <h2 class="board-title"><i class="fas fa-terminal"></i> <span data-i18n="skill.languages">程式語言</span></h2>
+                <div class="board-content">
+                    <div class="board-item">
+                        <img src="src/skill/Python.png" alt="Python" loading="lazy">
+                        <p class="board-item-name">Python</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+                    </div>
+                    <div class="board-item">
+                        <img src="src/skill/JavaScript.png" alt="JavaScript" loading="lazy">
+                        <p class="board-item-name">JavaScript</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+                    </div>
                 </div>
-                <div class="borad-item">
-                    <img src="src/skill/JavaScript.png" alt="JavaScript">
-                    <p class="board-item-name">JavaScript</p>
-                </div>
-            </div>
-            <h2 class="board-title">前端技術</h2>
-            <div class="board-content">
-                <div class="borad-item">
-                    <img src="src/skill/HTML5.png" alt="HTML5">
-                    <p class="board-item-name">HTML5</p>
-                </div>
-                <div class="borad-item">
-                    <img src="src/skill/CSS.png" alt="CSS">
-                    <p class="board-item-name">CSS</p>
-                </div>       
-                <div class="borad-item">
-                    <img src="src/skill/React.png" alt="React">
-                    <p class="board-item-name">React</p>
-                </div>     
-            </div>
-            <h2 class="board-title">資料庫</h2>
-            <div class="board-content">
-                <div class="borad-item">
-                    <img src="src/skill/MongoDB.png" alt="MongoDB">
-                    <p class="board-item-name">MongoDB</p>
-                </div>     
-                <div class="borad-item">
-                    <img src="src/skill/MySQL.png" alt="MySQL">
-                    <p class="board-item-name">MySQL</p>
-                </div>     
             </div>
 
-            <h2 class="board-title">工具</h2>
-            <div class="board-content">
-                <div class="borad-item">
-                    <img src="src/skill/Git.png" alt="Git">
-                    <p class="board-item-name">Git</p>
-                </div>     
-                <div class="borad-item">
-                    <img src="src/skill/Github.png" alt="Github">
-                    <p class="board-item-name">Github</p>
-                </div>     
-                <div class="borad-item">
-                    <img src="src/skill/Docker.png" alt="Docker">
-                    <p class="board-item-name">Docker</p>
-                </div>   
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="board-title"><i class="fas fa-palette"></i> <span data-i18n="skill.frontend">前端技術</span></h2>
+                <div class="board-content">
+                    <div class="board-item">
+                        <img src="src/skill/HTML5.png" alt="HTML5" loading="lazy">
+                        <p class="board-item-name">HTML5</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+                    </div>
+                    <div class="board-item">
+                        <img src="src/skill/CSS.png" alt="CSS" loading="lazy">
+                        <p class="board-item-name">CSS</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+                    </div>
+                    <div class="board-item">
+                        <img src="src/skill/React.png" alt="React" loading="lazy">
+                        <p class="board-item-name">React</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="board-title"><i class="fas fa-database"></i> <span data-i18n="skill.database">資料庫</span></h2>
+                <div class="board-content">
+                    <div class="board-item">
+                        <img src="src/skill/MongoDB.png" alt="MongoDB" loading="lazy">
+                        <p class="board-item-name">MongoDB</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="75"></div></div>
+                    </div>
+                    <div class="board-item">
+                        <img src="src/skill/MySQL.png" alt="MySQL" loading="lazy">
+                        <p class="board-item-name">MySQL</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="board-title"><i class="fas fa-tools"></i> <span data-i18n="skill.tools">工具</span></h2>
+                <div class="board-content">
+                    <div class="board-item">
+                        <img src="src/skill/Git.png" alt="Git" loading="lazy">
+                        <p class="board-item-name">Git</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+                    </div>
+                    <div class="board-item">
+                        <img src="src/skill/Github.png" alt="Github" loading="lazy">
+                        <p class="board-item-name">GitHub</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+                    </div>
+                    <div class="board-item">
+                        <img src="src/skill/Docker.png" alt="Docker" loading="lazy">
+                        <p class="board-item-name">Docker</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="65"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERTISE ===== -->
+        <section id="expertise" class="expertise-section">
+            <h1 class="section-title" data-aos="fade-right"><i class="fas fa-chart-line"></i> <span data-i18n="expertise.title">專業領域</span></h1>
+            <div class="expertise-grid" data-aos="fade-up">
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-brain"></i></div>
+                    <h3 data-i18n="expertise.ml.title">機器學習 / AI</h3>
+                    <p data-i18n="expertise.ml.desc">熟悉 Scikit-learn、TensorFlow 等框架，具備監督式與非監督式學習實務經驗，擅長特徵工程與模型調優</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-database"></i></div>
+                    <h3 data-i18n="expertise.data.title">資料工程</h3>
+                    <p data-i18n="expertise.data.desc">精通 Python 資料處理生態系 (Pandas, NumPy)，具備 ETL Pipeline 建置經驗，擅長大規模資料清洗與分析</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3 data-i18n="expertise.finance.title">財務分析</h3>
+                    <p data-i18n="expertise.finance.desc">具備財報分析、投資組合理論與衍生性金融商品知識，持有多張金融證照，能結合數據與金融專業</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-code"></i></div>
+                    <h3 data-i18n="expertise.fullstack.title">全端開發</h3>
+                    <p data-i18n="expertise.fullstack.desc">前端使用 React / HTML / CSS，後端熟悉 Node.js / Python Flask，具備 RESTful API 設計與資料庫操作經驗</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-spider"></i></div>
+                    <h3 data-i18n="expertise.crawler.title">網路爬蟲</h3>
+                    <p data-i18n="expertise.crawler.desc">開發分佈式爬蟲系統，具備反反爬蟲技術 (Cloudflare bypass)，Celery + RabbitMQ 非同步任務架構</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-coins"></i></div>
+                    <h3 data-i18n="expertise.fintech.title">FinTech 金融科技</h3>
+                    <p data-i18n="expertise.fintech.desc">結合資訊技術與金融知識，研究量化交易策略、信用風險模型，致力於 AI 驅動的金融創新應用</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="contact-section">
+            <h1 class="section-title" data-aos="fade-right"><i class="fas fa-envelope"></i> <span data-i18n="contact.title">聯絡我</span></h1>
+            <div class="contact-container" data-aos="fade-up">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:victor.aimhigh0603@gmail.com">victor.aimhigh0603@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>0958-XXX-031</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/victor-900603" target="_blank" rel="noopener">github.com/victor-900603</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <h2 data-i18n="contact.formTitle">留言給我</h2>
+                    <div class="form-group">
+                        <input type="text" id="form-name" data-i18n-placeholder="contact.formName" placeholder="您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="form-email" data-i18n-placeholder="contact.formEmail" placeholder="您的 Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="form-message" data-i18n-placeholder="contact.formMessage" placeholder="您的留言..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="contact.formSubmit">送出</span>
+                    </button>
+                </form>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p data-i18n="footer.copyright">&copy; 2024 - 2026 Victor Chen. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/victor-900603" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:victor.aimhigh0603@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
 
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
-
 </html>
