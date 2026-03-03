@@ -145,7 +145,7 @@
                             <i class="fas fa-laptop-code item-icon"></i>
                             <div>
                                 <h3 class="item-title" data-i18n="about.coding.label">程式專長</h3>
-                                <p class="item-content" data-i18n="about.coding.value">資料分析、機器學習、網路爬蟲、資料庫</p>
+                                <p class="item-content" data-i18n="about.coding.value">資料分析、機器學習、網路爬蟲、網頁開發、資料庫</p>
                             </div>
                         </div>
                         <div class="item">
@@ -185,7 +185,6 @@
                         <div class="timeline-tags">
                             <span class="tag" data-i18n="education.nycu.tag1">財務金融</span>
                             <span class="tag" data-i18n="education.nycu.tag2">資料科學</span>
-                            <span class="tag" data-i18n="education.nycu.tag3">機器學習</span>
                         </div>
                     </div>
                 </div>
@@ -213,12 +212,14 @@
                     <div class="timeline-content">
                         <p class="timeline-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="internships.shenyi.period">2025 / 09 -</span></p>
                         <h2 class="timeline-title" data-i18n="internships.shenyi.name">伸易自主健康股份有限公司</h2>
-                        <h3 class="timeline-subtitle" data-i18n="internships.shenyi.role">全端工程師</h3>
+                        <h3 class="timeline-subtitle" data-i18n="internships.shenyi.role">接案全端工程師</h3>
                         <p class="timeline-description" data-i18n="internships.shenyi.desc">負責前端網頁與後端開發，協助整合多個模組並優化系統效能</p>
                         <div class="timeline-tags">
                             <span class="tag">Full-Stack</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">AWS</span>
                         </div>
                     </div>
                 </div>
@@ -284,14 +285,6 @@
                     <p class="project-desc" data-i18n="projects.finance.desc">串接金融 API 進行即時財報分析，結合機器學習模型預測股票走勢</p>
                     <div class="project-tags">
                         <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>React</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-globe"></i></div>
-                    <h3 class="project-title" data-i18n="projects.portfolio.title">個人履歷網站</h3>
-                    <p class="project-desc" data-i18n="projects.portfolio.desc">使用純 HTML/CSS/JS 搭配動畫效果打造互動式個人履歷，支援深色模式與 RWD</p>
-                    <div class="project-tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>RWD</span>
                     </div>
                 </div>
             </div>
@@ -373,6 +366,11 @@
                         <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
                     </div>
                     <div class="board-item">
+                        <img src="src/skill/Vue.png" alt="Vue.js" loading="lazy">
+                        <p class="board-item-name">Vue.js</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+                    </div>
+                    <div class="board-item">
                         <img src="src/skill/React.png" alt="React" loading="lazy">
                         <p class="board-item-name">React</p>
                         <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
@@ -412,7 +410,12 @@
                     <div class="board-item">
                         <img src="src/skill/Docker.png" alt="Docker" loading="lazy">
                         <p class="board-item-name">Docker</p>
-                        <div class="skill-bar"><div class="skill-fill" data-level="65"></div></div>
+                        <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+                    </div>
+                    <div class="board-item">
+                        <img src="src/skill/AWS.png" alt="AWS" loading="lazy">
+                        <p class="board-item-name">AWS</p>
+                        <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
                     </div>
                 </div>
             </div>
@@ -422,15 +425,15 @@
         <section id="expertise" class="expertise-section">
             <h1 class="section-title" data-aos="fade-right"><i class="fas fa-chart-line"></i> <span data-i18n="expertise.title">專業領域</span></h1>
             <div class="expertise-grid" data-aos="fade-up">
-                <div class="expertise-card">
+                <!-- <div class="expertise-card">
                     <div class="expertise-icon"><i class="fas fa-brain"></i></div>
                     <h3 data-i18n="expertise.ml.title">機器學習 / AI</h3>
-                    <p data-i18n="expertise.ml.desc">熟悉 Scikit-learn、TensorFlow 等框架，具備監督式與非監督式學習實務經驗，擅長特徵工程與模型調優</p>
-                </div>
+                    <p data-i18n="expertise.ml.desc">熟悉 Scikit-learn、TensorFlow 等框架</p>
+                </div> -->
                 <div class="expertise-card">
                     <div class="expertise-icon"><i class="fas fa-database"></i></div>
                     <h3 data-i18n="expertise.data.title">資料工程</h3>
-                    <p data-i18n="expertise.data.desc">精通 Python 資料處理生態系 (Pandas, NumPy)，具備 ETL Pipeline 建置經驗，擅長大規模資料清洗與分析</p>
+                    <p data-i18n="expertise.data.desc">精通 Python 資料處理、可視化生態系 (Pandas, NumPy, Matplotlib, Seaborn)，擅長資料清洗與分析</p>
                 </div>
                 <div class="expertise-card">
                     <div class="expertise-icon"><i class="fas fa-chart-pie"></i></div>
@@ -440,7 +443,7 @@
                 <div class="expertise-card">
                     <div class="expertise-icon"><i class="fas fa-code"></i></div>
                     <h3 data-i18n="expertise.fullstack.title">全端開發</h3>
-                    <p data-i18n="expertise.fullstack.desc">前端使用 React / HTML / CSS，後端熟悉 Node.js / Python Flask，具備 RESTful API 設計與資料庫操作經驗</p>
+                    <p data-i18n="expertise.fullstack.desc">前端使用 Vue / React / HTML / CSS，後端熟悉 Django / Flask，具備 RESTful API 設計與資料庫操作經驗</p>
                 </div>
                 <div class="expertise-card">
                     <div class="expertise-icon"><i class="fas fa-spider"></i></div>
@@ -448,9 +451,14 @@
                     <p data-i18n="expertise.crawler.desc">開發分佈式爬蟲系統，具備反反爬蟲技術 (Cloudflare bypass)，Celery + RabbitMQ 非同步任務架構</p>
                 </div>
                 <div class="expertise-card">
-                    <div class="expertise-icon"><i class="fas fa-coins"></i></div>
-                    <h3 data-i18n="expertise.fintech.title">FinTech 金融科技</h3>
-                    <p data-i18n="expertise.fintech.desc">結合資訊技術與金融知識，研究量化交易策略、信用風險模型，致力於 AI 驅動的金融創新應用</p>
+                    <div class="expertise-icon"><i class="fas fa-cloud"></i></div>
+                    <h3 data-i18n="expertise.cloud.title">雲端服務</h3>
+                    <p data-i18n="expertise.cloud.desc">熟悉 AWS 雲端服務 (EC2, S3, RDS)，具備部署與維護經驗，能有效利用雲端資源提升系統效能與可擴展性</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fas fa-robot"></i></div>
+                    <h3 data-i18n="expertise.rag.title">RAG 系統</h3>
+                    <p data-i18n="expertise.rag.desc">具備 Retrieval-Augmented Generation (RAG) 系統開發經驗，能結合大型語言模型與外部知識庫實現智能問答與資訊檢索功能</p>
                 </div>
             </div>
         </section>
