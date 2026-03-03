@@ -1,4 +1,4 @@
-export const caculateAge = (birthDate) => {
+export const calculateAge = (birthDate) => {
     try {
         const today = new Date();
         const birth = new Date(birthDate);
@@ -14,6 +14,6 @@ export const caculateAge = (birthDate) => {
         return age;
     } catch (error) {
         console.error(error);
-        
+        return '?';
     }
 }
