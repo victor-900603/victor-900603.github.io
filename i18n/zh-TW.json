@@ -4,14 +4,14 @@
         "label": "中文"
     },
 
-    "nav.about": "About",
-    "nav.education": "Education",
-    "nav.internships": "Internships",
-    "nav.projects": "Projects",
-    "nav.certificate": "Certificate",
-    "nav.skill": "Skill",
-    "nav.expertise": "Expertise",
-    "nav.contact": "Contact",
+    "nav.about": "關於",
+    "nav.education": "教育背景",
+    "nav.internships": "實習經歷",
+    "nav.projects": "專案作品",
+    "nav.certificate": "證照資格",
+    "nav.skill": "技能專長",
+    "nav.expertise": "專業領域",
+    "nav.contact": "聯絡資訊",
 
     "about.name": "諶昱維",
     "about.engName": "(Yu-Wei, Chen)",
