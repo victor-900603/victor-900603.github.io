@@ -205,18 +205,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('form-name').value;
-            const email = document.getElementById('form-email').value;
-            const message = document.getElementById('form-message').value;
+    // const contactForm = document.getElementById('contact-form');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', (e) => {
+    //         e.preventDefault();
+    //         const name = document.getElementById('form-name').value;
+    //         const email = document.getElementById('form-email').value;
+    //         const message = document.getElementById('form-message').value;
 
-            alert(`${contactSuccessMsg}\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
-            contactForm.reset();
-        });
-    }
+    //         alert(`${contactSuccessMsg}\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    //         contactForm.reset();
+    //     });
+    // }
 
 });
 
