@@ -428,6 +428,41 @@ section {
     transform: scale(1.03);
 }
 
+.portrait-hint {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+.portrait-hint .hint-btn {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all var(--transition);
+}
+
+.portrait-hint i {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.portrait-wrapper:hover .portrait-hint {
+    opacity: 1;
+}
+
 .portrait-overlay {
     position: absolute;
     inset: 0;
