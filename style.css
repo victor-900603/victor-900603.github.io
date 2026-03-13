@@ -410,9 +410,18 @@ section {
     aspect-ratio: 4/5;
     object-fit: cover;
     object-position: center;
+    image-rendering: high-quality;
     display: block;
     border-radius: var(--radius);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#portrait-img {
+    cursor: pointer;
+}
+
+#portrait-container:hover #portrait-img {
+    opacity: 0.85;
 }
 
 .portrait-wrapper:hover .portrait {
@@ -430,6 +439,7 @@ section {
     justify-content: center;
     padding-bottom: 1.5rem;
     border-radius: var(--radius);
+    cursor: pointer;
 }
 
 .portrait-wrapper:hover .portrait-overlay {

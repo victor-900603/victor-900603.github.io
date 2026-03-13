@@ -185,6 +185,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    // Portrait switching
+    const portraitImg = document.getElementById('portrait-img');
+    const portraitContainer = document.getElementById('portrait-container');
+    if (portraitImg) {
+        const savedPortrait = localStorage.getItem('portraitMode') || 'formal';
+        
+        function setPortrait(mode) {
+            const src = portraitImg.dataset[mode];
+            portraitImg.style.opacity = '0';
+            setTimeout(() => {
+                portraitImg.src = src;
+                portraitImg.style.opacity = '1';
+            }, 250);
+            localStorage.setItem('portraitMode', mode);
+        }
+        
+        // Load saved portrait
+        setPortrait(savedPortrait);
+        
+        // Toggle on click
+        portraitContainer.addEventListener('click', () => {
+            const current = localStorage.getItem('portraitMode') || 'formal';
+            const next = current === 'formal' ? 'casual' : 'formal';
+            setPortrait(next);
+        });
+    }
+
     const skillBars = document.querySelectorAll('.skill-fill');
     const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
