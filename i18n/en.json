@@ -72,10 +72,13 @@
     "internships.iii1.tag2": "Project Collaboration",
 
     "projects.title": "Projects",
-    "projects.crawler.title": "Distributed Web Crawler System",
-    "projects.crawler.desc": "Large-scale distributed crawler architecture based on Python + Celery + RabbitMQ, with anti-bot bypass capabilities and data cleaning pipelines.",
-    "projects.finance.title": "Financial Data Analysis Platform",
-    "projects.finance.desc": "Integrated financial APIs for real-time financial statement analysis, combined with ML models to predict stock trends.",
+    "projects.crawler.title": "Web Crawler Framework",
+    "projects.crawler.desc": "A Python-based web crawler framework supporting both synchronous and asynchronous crawling. Configurable for individual websites through settings files, and supports multiple storage options.",
+    "projects.discord.title": "Discord Music Bot",
+    "projects.discord.desc": "A music bot built with FastAPI and Discord SDK, integrating YouTube Search API and featuring a React frontend for web-based control.",
+    "projects.rag.title": "RAG System",
+    "projects.rag.desc": "Developed a Retrieval-Augmented Generation (RAG) system using Langchain and a Django backend.",
+
 
     "certificate.title": "Certificates",
     "certificate.category": "Finance & Accounting",

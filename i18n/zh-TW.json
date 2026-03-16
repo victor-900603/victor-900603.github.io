@@ -72,10 +72,12 @@
     "internships.iii1.tag2": "專案協作",
 
     "projects.title": "專案作品",
-    "projects.crawler.title": "分佈式網路爬蟲系統",
-    "projects.crawler.desc": "基於 Python + Celery + RabbitMQ 的大規模分佈式爬蟲架構，支援反爬蟲機制突破與資料清洗",
-    "projects.finance.title": "財務資料分析平台",
-    "projects.finance.desc": "串接金融 API 進行即時財報分析，結合機器學習模型預測股票走勢",
+    "projects.crawler.title": "網路爬蟲框架",
+    "projects.crawler.desc": "基於 Python 同步 + 異步的網路爬蟲框架，可以透過設定檔對個別網站進行配置，支援多種儲存方式",
+    "projects.discord.title": "Discord 音樂機器人",
+    "projects.discord.desc": "基於 FastAPI 與 Discord SDK 構建的音樂機器人，整合 YouTube Search API 並搭配 React 前端實現 Web 同步操控",
+    "projects.rag.title": "RAG 系統",
+    "projects.rag.desc": "使用 Langchain 開發的 Retrieval-Augmented Generation (RAG) 系統，搭配 Django 後端框架",
 
     "certificate.title": "證照",
     "certificate.category": "金融財會",
