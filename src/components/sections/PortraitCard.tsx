@@ -9,7 +9,7 @@ type PortraitMode = 'formal' | 'casual'
 
 export function PortraitCard({ alt }: { alt: string }) {
   const { t } = useTranslation()
-  const [mode, setMode] = useLocalStorage<PortraitMode>('portrait', 'formal')
+  const [mode, setMode] = useLocalStorage<PortraitMode>('portrait', 'casual')
 
   const next: PortraitMode = mode === 'formal' ? 'casual' : 'formal'
 
