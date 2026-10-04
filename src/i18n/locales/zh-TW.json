@@ -2,7 +2,7 @@
   "nav": {
     "about": "關於",
     "education": "教育背景",
-    "internships": "實習經歷",
+    "internships": "工作經驗",
     "projects": "專案作品",
     "certificate": "證照資格",
     "skill": "技能專長",
@@ -62,35 +62,42 @@
     ]
   },
   "internships": {
-    "title": "實習經歷",
+    "title": "工作經歷",
     "entries": [
       {
-        "period": "2025 / 09 -",
+        "period": "2026 / 07 - 仍在職",
+        "name": "凱基商業銀行股份有限公司",
+        "role": "暑期實習生",
+        "desc": "主導從 0 到 1 的客戶自助支援工具開發，將長篇 PDF 操作手冊轉化為輕量級 Chrome 擴充功能；設計 RAG 智慧客服流程，並以 React 19 與 driver.js 自研導覽引擎，有效降低日常進線諮詢負擔。",
+        "tags": ["React", "Chrome Extension", "RAG", "JavaScript", "Python", "Project Management"]
+      },
+      {
+        "period": "2025 / 10 - 仍在職",
         "name": "伸易自主健康股份有限公司",
-        "role": "接案全端工程師",
-        "desc": "負責前端網頁與後端開發，協助整合多個模組並優化系統效能",
-        "tags": ["Full-Stack", "Vue.js", "Django", "MySQL", "AWS"]
+        "role": "兼職全端工程師",
+        "desc": "獨立主導 2 套 Vue.js 前端系統與 Django 後端之端到端交付，設計並實作 80+ 支 RESTful API（涵蓋金流、會員、RBAC 與 JWT）；於 AWS 建置並維運 5 個核心微服務，並負責 IAM 與 GitHub 權限治理。",
+        "tags": ["Vue.js", "Django", "RESTful API", "AWS", "RDBMS", "Git"]
       },
       {
         "period": "2024 / 04 - 2024 / 10",
         "name": "財團法人資訊工業策進會",
         "role": "工讀生",
-        "desc": "協助進行資訊系統維護與開發，參與多個專案的前端與後端整合工作",
-        "tags": ["系統維護", "前後端整合"]
+        "desc": "以 React 與 Express 建置內部金融知識對話平台，整合既有業務 API 與知識資料庫，完成文件檢索、權限控管與對話歷史追蹤；採用 MongoDB 設計高併發對話資料模型，並以 Docker 落實容器化部署。",
+        "tags": ["React", "Express", "MongoDB", "Docker"]
       },
       {
-        "period": "2023 / 11 - 2024 / 10",
+        "period": "2023 / 11 - 2024 / 09",
         "name": "大數軟體有限公司",
         "role": "網路爬蟲實習生",
-        "desc": "運用 Python 結合 Celery 構建分佈式非同步任務處理系統，並採用 RabbitMQ 作為 Message Broker。針對數百個新聞與部落格網站開發專屬爬蟲腳本，成功突破 Cloudflare 等進階反爬蟲機制，實現大規模網頁的穩定並行抓取與資料清洗。",
-        "tags": ["Python", "Celery", "RabbitMQ", "Web Scraping"]
+        "desc": "以分散式爬蟲架構大規模採集 100+ 新聞與部落格網站，實作動態 Proxy Pool、Request Header 輪替與指數退避重試以突破反爬蟲限制；並設計端到端 ETL 流程，將資料封裝為低延遲 RESTful API。",
+        "tags": ["Python", "Web Crawling", "ETL", "RESTful API", "Git"]
       },
       {
         "period": "2023 / 07 - 2023 / 08",
         "name": "財團法人資訊工業策進會",
         "role": "實習生",
-        "desc": "協助進行資訊系統維護與開發，參與多個專案的前端與後端整合工作",
-        "tags": ["系統開發", "專案協作"]
+        "desc": "於部門 WordPress 站點以 PHP 介接 OpenAI Chat API 建置內部 AI 對話模組；以 Python 與 Selenium 開發動態網頁爬蟲擷取企業資料，並調研 FinTech 加速器與 ESG 金融科技趨勢。",
+        "tags": ["PHP", "WordPress", "JavaScript", "Python", "Web Crawling"]
       }
     ]
   },
@@ -137,33 +144,25 @@
   "expertise": {
     "title": "專業領域",
     "items": {
-      "data": {
-        "title": "資料工程",
-        "desc": "精通 Python 資料處理、可視化生態系 (Pandas, NumPy, Matplotlib, Seaborn)，擅長資料清洗與分析"
-      },
       "finance": {
         "title": "財務分析",
         "desc": "具備財報分析、投資組合理論與衍生性金融商品知識，持有多張金融證照，能結合數據與金融專業"
       },
       "fullstack": {
-        "title": "全端開發",
-        "desc": "前端使用 Vue / React / HTML / CSS，後端熟悉 Django / Flask，具備 RESTful API 設計與資料庫操作經驗"
-      },
-      "crawler": {
-        "title": "網路爬蟲",
-        "desc": "開發分佈式爬蟲系統，具備反反爬蟲技術 (Cloudflare bypass)，Celery + RabbitMQ 非同步任務架構"
-      },
-      "cloud": {
-        "title": "雲端服務",
-        "desc": "熟悉 AWS 雲端服務 (EC2, S3, RDS)，具備部署與維護經驗，能有效利用雲端資源提升系統效能與可擴展性"
+        "title": "全端系統開發與 API 架構",
+        "desc": "具備 Python 後端架構（Django / FastAPI / DRF）與現代前端框架（Vue / React）全端交付經驗，精通 RESTful API 設計、JWT / RBAC 權限控管與資料庫建模，能獨立承接端到端開發。"
       },
       "rag": {
-        "title": "RAG 系統",
-        "desc": "具備 Retrieval-Augmented Generation (RAG) 系統開發經驗，能結合大型語言模型與外部知識庫實現智能問答與資訊檢索功能"
+        "title": "生成式 AI 應用（Agent / RAG）",
+        "desc": "以 LangGraph 實作 ReAct 架構的 Agent 決策流程，並以 LangChain 設計 RAG 檢索（章節切分、查詢改寫、BM25 加向量混合檢索、Cross-Encoder 重排序），確保回覆精確並附帶原始頁碼引用。"
       },
-      "ml": {
-        "title": "機器學習 / AI",
-        "desc": "熟悉 Scikit-learn、TensorFlow 等框架"
+      "cloud": {
+        "title": "雲端基礎架構、資料庫與 DevOps",
+        "desc": "運用 AWS（EC2 / ECS / S3 / RDS / API Gateway）規劃並維運微服務架構，熟悉 Docker 容器化、Git 版控與 CI/CD 流程，並依最小權限原則（PoLP）規劃 IAM 存取控制與雲端資安。"
+      },
+      "crawler": {
+        "title": "分散式資料工程與反爬蟲",
+        "desc": "以 Celery 與 Redis 建構分散式採集架構，擅長 TLS / JA3 指紋偽裝、動態 Proxy Pool 與 Playwright / Selenium 動態渲染，突破 Cloudflare / Akamai 等風控，並以 Pandas 完成 ETL 與 API 封裝。"
       }
     }
   },

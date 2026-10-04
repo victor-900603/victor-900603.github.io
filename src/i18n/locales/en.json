@@ -2,7 +2,7 @@
   "nav": {
     "about": "About",
     "education": "Education",
-    "internships": "Internships",
+    "internships": "Experience",
     "projects": "Projects",
     "certificate": "Certificate",
     "skill": "Skill",
@@ -62,35 +62,42 @@
     ]
   },
   "internships": {
-    "title": "Internships",
+    "title": "Work Experience",
     "entries": [
       {
-        "period": "2025 / 09 -",
+        "period": "2026 / 07 - Present",
+        "name": "KGI Bank",
+        "role": "Summer Intern",
+        "desc": "Led a 0-to-1 customer self-service support tool, turning lengthy PDF manuals into a lightweight Chrome extension; designed a RAG support pipeline and built a custom navigation engine with React 19 and driver.js to cut inbound support requests.",
+        "tags": ["React", "Chrome Extension", "RAG", "JavaScript", "Python", "Project Management"]
+      },
+      {
+        "period": "2025 / 10 - Present",
         "name": "ShenYi Autonomous Health Co., Ltd.",
-        "role": "Contract Full-Stack Engineer",
-        "desc": "Responsible for frontend and backend development, integrating multiple modules and optimizing system performance.",
-        "tags": ["Full-Stack", "Vue.js", "Django", "MySQL", "AWS"]
+        "role": "Part-time Full-Stack Engineer",
+        "desc": "Independently led two Vue.js frontends with a Django backend, designing and implementing 80+ RESTful APIs (payments, membership, RBAC, JWT); built and operated five core microservices on AWS and governed IAM and GitHub permissions.",
+        "tags": ["Vue.js", "Django", "RESTful API", "AWS", "RDBMS", "Git"]
       },
       {
         "period": "2024 / 04 - 2024 / 10",
         "name": "Institute for Information Industry (III)",
         "role": "Part-time Developer",
-        "desc": "Assisted in information system maintenance and development, participating in frontend-backend integration across multiple projects.",
-        "tags": ["System Maintenance", "Full-Stack Integration"]
+        "desc": "Built an internal finance knowledge chat platform with React and Express, integrating business APIs and a knowledge base for document retrieval, access control, and conversation history; modeled high-concurrency records in MongoDB and containerized deployment with Docker.",
+        "tags": ["React", "Express", "MongoDB", "Docker"]
       },
       {
-        "period": "2023 / 11 - 2024 / 10",
+        "period": "2023 / 11 - 2024 / 09",
         "name": "BigData Software Co., Ltd.",
         "role": "Web Crawler Intern",
-        "desc": "Built a distributed asynchronous task processing system using Python + Celery + RabbitMQ. Developed custom crawler scripts for hundreds of news and blog websites, successfully bypassing advanced anti-bot mechanisms like Cloudflare for stable large-scale parallel scraping and data cleaning.",
-        "tags": ["Python", "Celery", "RabbitMQ", "Web Scraping"]
+        "desc": "Scaled distributed crawling across 100+ news and blog sites, implementing dynamic proxy pools, header rotation, and exponential-backoff retries to bypass anti-bot defenses; designed an end-to-end ETL pipeline and exposed the data through a low-latency RESTful API.",
+        "tags": ["Python", "Web Crawling", "ETL", "RESTful API", "Git"]
       },
       {
         "period": "2023 / 07 - 2023 / 08",
         "name": "Institute for Information Industry (III)",
         "role": "Intern",
-        "desc": "Assisted in information system maintenance and development, participating in frontend-backend integration across multiple projects.",
-        "tags": ["System Development", "Project Collaboration"]
+        "desc": "Built an internal AI chat module on WordPress by integrating the OpenAI Chat API with PHP; developed a dynamic Selenium crawler to extract company data, and researched FinTech accelerators and ESG trends.",
+        "tags": ["PHP", "WordPress", "JavaScript", "Python", "Web Crawling"]
       }
     ]
   },
@@ -137,33 +144,25 @@
   "expertise": {
     "title": "Expertise",
     "items": {
-      "data": {
-        "title": "Data Engineering",
-        "desc": "Expert in Python data ecosystem (Pandas, NumPy, Matplotlib, Seaborn). Experienced in data cleaning, and analysis."
-      },
       "finance": {
         "title": "Financial Analysis",
         "desc": "Knowledge in financial statement analysis, portfolio theory, and derivatives. Holds multiple financial licenses, bridging data and finance."
       },
       "fullstack": {
-        "title": "Full-Stack Development",
-        "desc": "Frontend: Vue / React / HTML / CSS. Backend: Django / Flask. Experienced in RESTful API design and database operations."
-      },
-      "crawler": {
-        "title": "Web Crawling",
-        "desc": "Developed distributed crawler systems with anti-bot bypass (Cloudflare), using Celery + RabbitMQ async task architecture."
-      },
-      "cloud": {
-        "title": "Cloud Services",
-        "desc": "Familiar with AWS cloud services (EC2, S3, RDS), experienced in deployment and maintenance, able to effectively utilize cloud resources to enhance system performance and scalability."
+        "title": "Full-Stack & API Architecture",
+        "desc": "End-to-end delivery experience across Python backends (Django / FastAPI / DRF) and modern frontends (Vue / React), proficient in RESTful API design, JWT / RBAC access control, and data modeling."
       },
       "rag": {
-        "title": "RAG Systems",
-        "desc": "Experienced in developing Retrieval-Augmented Generation (RAG) systems, combining large language models with external knowledge bases for intelligent Q&A and information retrieval capabilities."
+        "title": "Generative AI (Agent / RAG)",
+        "desc": "Builds ReAct-style agent flows with LangGraph and designs RAG retrieval pipelines with LangChain (section-aware chunking, query rewriting, hybrid BM25 plus vector search, Cross-Encoder reranking) that return accurate answers with source page citations."
       },
-      "ml": {
-        "title": "Machine Learning / AI",
-        "desc": "Proficient with Scikit-learn, TensorFlow, etc. Experienced in supervised & unsupervised learning, feature engineering, and model tuning."
+      "cloud": {
+        "title": "Cloud, Databases & DevOps",
+        "desc": "Plans and operates microservice architectures on AWS (EC2 / ECS / S3 / RDS / API Gateway), familiar with Docker, Git workflows, and CI/CD, applying least-privilege (PoLP) IAM access control."
+      },
+      "crawler": {
+        "title": "Distributed Data Engineering & Web Scraping",
+        "desc": "Builds distributed scraping systems with Celery and Redis, skilled in TLS / JA3 fingerprint spoofing, dynamic proxy pools, and Playwright / Selenium rendering to bypass Cloudflare / Akamai, plus Pandas-based ETL and API packaging."
       }
     }
   },

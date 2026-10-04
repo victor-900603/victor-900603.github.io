@@ -7,7 +7,6 @@ import {
   Bug,
   Cloud,
   Code2,
-  Database,
   GraduationCap,
   Layers,
   LineChart,
@@ -139,24 +138,22 @@ export const PROJECTS: readonly ProjectMeta[] = [
   { icon: Bot, tags: ['Python', 'Pandas', 'Langchain', 'Django', 'RAG', 'OLLAMA'] },
 ] as const
 
-export type ExpertiseKey = 'data' | 'finance' | 'fullstack' | 'crawler' | 'cloud' | 'rag'
+export type ExpertiseKey = 'finance' | 'fullstack' | 'rag' | 'cloud' | 'crawler'
 
 export const EXPERTISE_ORDER: readonly ExpertiseKey[] = [
-  'data',
   'finance',
   'fullstack',
-  'crawler',
-  'cloud',
   'rag',
+  'cloud',
+  'crawler',
 ] as const
 
 export const EXPERTISE_ICONS: Record<ExpertiseKey, LucideIcon> = {
-  data: Database,
   finance: PieChart,
   fullstack: Layers,
-  crawler: Search,
-  cloud: Cloud,
   rag: BrainCircuit,
+  cloud: Cloud,
+  crawler: Search,
 }
 
 export interface PortraitSet {

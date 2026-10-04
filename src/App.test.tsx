@@ -16,7 +16,7 @@ describe('App', () => {
 
     const main = within(screen.getByRole('main'))
     expect(main.getByText('求學經歷')).toBeInTheDocument()
-    expect(main.getByText('實習經歷')).toBeInTheDocument()
+    expect(main.getByText('工作經歷')).toBeInTheDocument()
     expect(main.getByText('專案作品')).toBeInTheDocument()
     expect(main.getByText('證照')).toBeInTheDocument()
     expect(main.getByText('技能')).toBeInTheDocument()
