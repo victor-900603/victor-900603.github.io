@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="諶昱維 (Victor Chen) - 資料科學家 / 機器學習工程師 / 財務金融碩士 履歷網站"
+    />
+    <meta
+      name="keywords"
+      content="Victor, 諶昱維, Resume, 履歷, 資料科學, 機器學習, 財務金融, NYCU"
+    />
+    <meta name="author" content="Yu-Wei Chen (Victor)" />
+    <meta property="og:title" content="Victor Chen | Resume" />
+    <meta property="og:description" content="資料科學 × 財務金融 — 用資料驅動決策" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://victor-900603.github.io/" />
+    <meta property="og:image" content="https://victor-900603.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Victor Chen | Resume" />
+    <meta name="twitter:description" content="資料科學 × 財務金融 — 用資料驅動決策" />
+    <meta name="twitter:image" content="https://victor-900603.github.io/og-image.png" />
+    <title>Victor Chen | Resume</title>
+
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var dark =
+            stored === 'dark' || (!stored && matchMedia('(prefers-color-scheme: dark)').matches)
+          document.documentElement.classList.toggle('dark', dark)
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+        } catch (error) {
+          /* storage unavailable */
+        }
+      })()
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Victor Chen">
+  <rect width="64" height="64" fill="#070C14" />
+  <path
+    d="M14 15 L32 49 L50 15"
+    fill="none"
+    stroke="#2DD4BF"
+    stroke-width="7"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
+</svg>
