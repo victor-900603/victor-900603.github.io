@@ -1,0 +1,128 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: 'Space Grotesk', 'Noto Sans TC', system-ui, sans-serif;
+  --font-sans: 'Inter', 'Noto Sans TC', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --color-paper: #f6f7f9;
+  --color-panel: #eef1f4;
+  --color-card: #ffffff;
+  --color-ink: #0b1220;
+  --color-muted: #4b5768;
+  --color-faint: #8b97a8;
+  --color-line: #d7dce4;
+  --color-signal: #0e9384;
+  --color-signal-soft: #d5f0ec;
+  --color-amber: #d97706;
+
+  --shadow-ledger: 0 1px 0 0 rgb(11 18 32 / 0.04), 0 18px 40px -28px rgb(11 18 32 / 0.35);
+  --radius-card: 4px;
+}
+
+.dark {
+  --color-paper: #070c14;
+  --color-panel: #0e1622;
+  --color-card: #0c1522;
+  --color-ink: #e6edf5;
+  --color-muted: #93a1b5;
+  --color-faint: #5f6d82;
+  --color-line: #1c2839;
+  --color-signal: #2dd4bf;
+  --color-signal-soft: #10312e;
+  --color-amber: #f59e0b;
+  --shadow-ledger: 0 1px 0 0 rgb(0 0 0 / 0.4), 0 18px 40px -28px rgb(0 0 0 / 0.8);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-signal);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility readout {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+@utility grid-surface {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-line) 60%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-line) 60%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 56px 56px;
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  animation: caret-blink 1.05s steps(1) infinite;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}

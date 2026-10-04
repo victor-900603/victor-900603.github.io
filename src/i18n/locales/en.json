@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "about": "About",
+    "education": "Education",
+    "internships": "Internships",
+    "projects": "Projects",
+    "certificate": "Certificate",
+    "skill": "Skill",
+    "expertise": "Expertise",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "toggleTheme": "Toggle dark mode",
+    "toggleLanguage": "Switch language",
+    "backToTop": "Back to top",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "PORTFOLIO",
+    "status": "Open to data science / machine learning opportunities"
+  },
+  "about": {
+    "name": "Yu-Wei Chen",
+    "engName": "(Victor)",
+    "nicknameLabel": "Nickname",
+    "nicknameValue": "Victor",
+    "ageLabel": "Age",
+    "eduLabel": "Education",
+    "eduValue": "NYCU – M.S. in Information Management & Finance",
+    "codingLabel": "Tech Skills",
+    "codingValue": "Data Analysis, Machine Learning, Web Crawling, Web Development, Database",
+    "financeLabel": "Finance",
+    "financeValue": "Financial Statement Analysis, Portfolio Management, Derivatives",
+    "goalLabel": "Goal",
+    "goalValue": "Data Scientist / ML Engineer / FinTech",
+    "scrollHint": "Scroll Down",
+    "portraitToggle": "Switch photo",
+    "taglines": [
+      "Data Science × Finance",
+      "Machine Learning Engineer",
+      "Full-Stack Developer",
+      "FinTech Enthusiast"
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "entries": [
+      {
+        "period": "2025 / 09 - Present",
+        "name": "National Yang Ming Chiao Tung University",
+        "dept": "M.S., Information Management & Finance",
+        "tags": ["Finance", "Data Science"]
+      },
+      {
+        "period": "2020 / 09 - 2024 / 06",
+        "name": "National Taipei University of Technology",
+        "dept": "B.S., Information & Finance Management",
+        "tags": ["Information Mgmt", "Finance Mgmt"]
+      }
+    ]
+  },
+  "internships": {
+    "title": "Internships",
+    "entries": [
+      {
+        "period": "2025 / 09 -",
+        "name": "ShenYi Autonomous Health Co., Ltd.",
+        "role": "Contract Full-Stack Engineer",
+        "desc": "Responsible for frontend and backend development, integrating multiple modules and optimizing system performance.",
+        "tags": ["Full-Stack", "Vue.js", "Django", "MySQL", "AWS"]
+      },
+      {
+        "period": "2024 / 04 - 2024 / 10",
+        "name": "Institute for Information Industry (III)",
+        "role": "Part-time Developer",
+        "desc": "Assisted in information system maintenance and development, participating in frontend-backend integration across multiple projects.",
+        "tags": ["System Maintenance", "Full-Stack Integration"]
+      },
+      {
+        "period": "2023 / 11 - 2024 / 10",
+        "name": "BigData Software Co., Ltd.",
+        "role": "Web Crawler Intern",
+        "desc": "Built a distributed asynchronous task processing system using Python + Celery + RabbitMQ. Developed custom crawler scripts for hundreds of news and blog websites, successfully bypassing advanced anti-bot mechanisms like Cloudflare for stable large-scale parallel scraping and data cleaning.",
+        "tags": ["Python", "Celery", "RabbitMQ", "Web Scraping"]
+      },
+      {
+        "period": "2023 / 07 - 2023 / 08",
+        "name": "Institute for Information Industry (III)",
+        "role": "Intern",
+        "desc": "Assisted in information system maintenance and development, participating in frontend-backend integration across multiple projects.",
+        "tags": ["System Development", "Project Collaboration"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "entries": [
+      {
+        "title": "Web Crawler Framework",
+        "desc": "A Python-based web crawler framework supporting both synchronous and asynchronous crawling. Configurable for individual websites through settings files, and supports multiple storage options."
+      },
+      {
+        "title": "Discord Music Bot",
+        "desc": "A music bot built with FastAPI and Discord SDK, integrating YouTube Search API and featuring a React frontend for web-based control."
+      },
+      {
+        "title": "RAG System",
+        "desc": "Developed a Retrieval-Augmented Generation (RAG) system using Langchain and a Django backend."
+      }
+    ]
+  },
+  "certificate": {
+    "title": "Certificates",
+    "category": "Finance & Accounting",
+    "items": [
+      "Certified Bookkeeper (National Exam)",
+      "Senior Securities Specialist",
+      "Securities Specialist",
+      "SITCA Investment Trust & Consulting Specialist",
+      "Futures Specialist",
+      "Trust Operations Specialist",
+      "FinTech Knowledge Certification",
+      "Financial Market Ethics"
+    ]
+  },
+  "skill": {
+    "title": "Skills",
+    "categories": {
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "database": "Databases",
+      "tools": "Tools"
+    }
+  },
+  "expertise": {
+    "title": "Expertise",
+    "items": {
+      "data": {
+        "title": "Data Engineering",
+        "desc": "Expert in Python data ecosystem (Pandas, NumPy, Matplotlib, Seaborn). Experienced in data cleaning, and analysis."
+      },
+      "finance": {
+        "title": "Financial Analysis",
+        "desc": "Knowledge in financial statement analysis, portfolio theory, and derivatives. Holds multiple financial licenses, bridging data and finance."
+      },
+      "fullstack": {
+        "title": "Full-Stack Development",
+        "desc": "Frontend: Vue / React / HTML / CSS. Backend: Django / Flask. Experienced in RESTful API design and database operations."
+      },
+      "crawler": {
+        "title": "Web Crawling",
+        "desc": "Developed distributed crawler systems with anti-bot bypass (Cloudflare), using Celery + RabbitMQ async task architecture."
+      },
+      "cloud": {
+        "title": "Cloud Services",
+        "desc": "Familiar with AWS cloud services (EC2, S3, RDS), experienced in deployment and maintenance, able to effectively utilize cloud resources to enhance system performance and scalability."
+      },
+      "rag": {
+        "title": "RAG Systems",
+        "desc": "Experienced in developing Retrieval-Augmented Generation (RAG) systems, combining large language models with external knowledge bases for intelligent Q&A and information retrieval capabilities."
+      },
+      "ml": {
+        "title": "Machine Learning / AI",
+        "desc": "Proficient with Scikit-learn, TensorFlow, etc. Experienced in supervised & unsupervised learning, feature engineering, and model tuning."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "lede": "Interested in data, models, or fintech? Reach out through the channels below.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2024 - 2026 Victor Chen. All Rights Reserved."
+  }
+}

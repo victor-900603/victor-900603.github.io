@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "about": "關於",
+    "education": "教育背景",
+    "internships": "實習經歷",
+    "projects": "專案作品",
+    "certificate": "證照資格",
+    "skill": "技能專長",
+    "expertise": "專業領域",
+    "contact": "聯絡資訊"
+  },
+  "a11y": {
+    "skipToContent": "跳至主要內容",
+    "toggleTheme": "切換深色模式",
+    "toggleLanguage": "切換語言",
+    "backToTop": "回到頂部",
+    "openMenu": "開啟選單",
+    "closeMenu": "關閉選單"
+  },
+  "hero": {
+    "eyebrow": "PORTFOLIO",
+    "status": "開放資料科學 / 機器學習相關機會"
+  },
+  "about": {
+    "name": "諶昱維",
+    "engName": "(Yu-Wei, Chen)",
+    "nicknameLabel": "暱稱",
+    "nicknameValue": "Victor",
+    "ageLabel": "年齡",
+    "eduLabel": "學歷",
+    "eduValue": "國立陽明交通大學 資管財金碩士班",
+    "codingLabel": "程式專長",
+    "codingValue": "資料分析、機器學習、網路爬蟲、網頁開發、資料庫",
+    "financeLabel": "財金能力",
+    "financeValue": "財報分析、投資組合、衍生性商品",
+    "goalLabel": "目標",
+    "goalValue": "Data Scientist / ML Engineer / FinTech",
+    "scrollHint": "向下滾動",
+    "portraitToggle": "切換照片",
+    "taglines": [
+      "Data Science × Finance",
+      "Machine Learning Engineer",
+      "Full-Stack Developer",
+      "FinTech Enthusiast"
+    ]
+  },
+  "education": {
+    "title": "求學經歷",
+    "entries": [
+      {
+        "period": "2025 / 09 - 就讀中",
+        "name": "國立陽明交通大學",
+        "dept": "資訊管理與財務金融學系財務金融碩士班",
+        "tags": ["財務金融", "資料科學"]
+      },
+      {
+        "period": "2020 / 09 - 2024 / 06",
+        "name": "國立臺北科技大學",
+        "dept": "資訊與財金管理系 學士畢業",
+        "tags": ["資訊管理", "財金管理"]
+      }
+    ]
+  },
+  "internships": {
+    "title": "實習經歷",
+    "entries": [
+      {
+        "period": "2025 / 09 -",
+        "name": "伸易自主健康股份有限公司",
+        "role": "接案全端工程師",
+        "desc": "負責前端網頁與後端開發，協助整合多個模組並優化系統效能",
+        "tags": ["Full-Stack", "Vue.js", "Django", "MySQL", "AWS"]
+      },
+      {
+        "period": "2024 / 04 - 2024 / 10",
+        "name": "財團法人資訊工業策進會",
+        "role": "工讀生",
+        "desc": "協助進行資訊系統維護與開發，參與多個專案的前端與後端整合工作",
+        "tags": ["系統維護", "前後端整合"]
+      },
+      {
+        "period": "2023 / 11 - 2024 / 10",
+        "name": "大數軟體有限公司",
+        "role": "網路爬蟲實習生",
+        "desc": "運用 Python 結合 Celery 構建分佈式非同步任務處理系統，並採用 RabbitMQ 作為 Message Broker。針對數百個新聞與部落格網站開發專屬爬蟲腳本，成功突破 Cloudflare 等進階反爬蟲機制，實現大規模網頁的穩定並行抓取與資料清洗。",
+        "tags": ["Python", "Celery", "RabbitMQ", "Web Scraping"]
+      },
+      {
+        "period": "2023 / 07 - 2023 / 08",
+        "name": "財團法人資訊工業策進會",
+        "role": "實習生",
+        "desc": "協助進行資訊系統維護與開發，參與多個專案的前端與後端整合工作",
+        "tags": ["系統開發", "專案協作"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "專案作品",
+    "entries": [
+      {
+        "title": "網路爬蟲框架",
+        "desc": "基於 Python 同步 + 異步的網路爬蟲框架，可以透過設定檔對個別網站進行配置，支援多種儲存方式"
+      },
+      {
+        "title": "Discord 音樂機器人",
+        "desc": "基於 FastAPI 與 Discord SDK 構建的音樂機器人，整合 YouTube Search API 並搭配 React 前端實現 Web 同步操控"
+      },
+      {
+        "title": "RAG 系統",
+        "desc": "使用 Langchain 開發的 Retrieval-Augmented Generation (RAG) 系統，搭配 Django 後端框架"
+      }
+    ]
+  },
+  "certificate": {
+    "title": "證照",
+    "category": "金融財會",
+    "items": [
+      "專技普考記帳士",
+      "證券商高級業務員",
+      "證券商業務員",
+      "投信投顧業務員",
+      "期貨商業務員",
+      "信託業業務員",
+      "金融科技力知識檢定",
+      "金融市場常識與職業道德"
+    ]
+  },
+  "skill": {
+    "title": "技能",
+    "categories": {
+      "languages": "程式語言",
+      "frontend": "前端技術",
+      "database": "資料庫",
+      "tools": "工具"
+    }
+  },
+  "expertise": {
+    "title": "專業領域",
+    "items": {
+      "data": {
+        "title": "資料工程",
+        "desc": "精通 Python 資料處理、可視化生態系 (Pandas, NumPy, Matplotlib, Seaborn)，擅長資料清洗與分析"
+      },
+      "finance": {
+        "title": "財務分析",
+        "desc": "具備財報分析、投資組合理論與衍生性金融商品知識，持有多張金融證照，能結合數據與金融專業"
+      },
+      "fullstack": {
+        "title": "全端開發",
+        "desc": "前端使用 Vue / React / HTML / CSS，後端熟悉 Django / Flask，具備 RESTful API 設計與資料庫操作經驗"
+      },
+      "crawler": {
+        "title": "網路爬蟲",
+        "desc": "開發分佈式爬蟲系統，具備反反爬蟲技術 (Cloudflare bypass)，Celery + RabbitMQ 非同步任務架構"
+      },
+      "cloud": {
+        "title": "雲端服務",
+        "desc": "熟悉 AWS 雲端服務 (EC2, S3, RDS)，具備部署與維護經驗，能有效利用雲端資源提升系統效能與可擴展性"
+      },
+      "rag": {
+        "title": "RAG 系統",
+        "desc": "具備 Retrieval-Augmented Generation (RAG) 系統開發經驗，能結合大型語言模型與外部知識庫實現智能問答與資訊檢索功能"
+      },
+      "ml": {
+        "title": "機器學習 / AI",
+        "desc": "熟悉 Scikit-learn、TensorFlow 等框架"
+      }
+    }
+  },
+  "contact": {
+    "title": "聯絡我",
+    "lede": "想聊聊資料、模型或金融科技嗎？歡迎透過以下管道與我聯繫。",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copyright": "© 2024 - 2026 Victor Chen. All Rights Reserved."
+  }
+}
