@@ -18,6 +18,7 @@ describe('App', () => {
     expect(main.getByText('求學經歷')).toBeInTheDocument()
     expect(main.getByText('工作經歷')).toBeInTheDocument()
     expect(main.getByText('專案作品')).toBeInTheDocument()
+    expect(main.getByText('競賽經歷')).toBeInTheDocument()
     expect(main.getByText('證照')).toBeInTheDocument()
     expect(main.getByText('技能')).toBeInTheDocument()
     expect(main.getByText('專業領域')).toBeInTheDocument()

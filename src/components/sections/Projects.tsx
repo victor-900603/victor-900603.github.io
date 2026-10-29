@@ -1,5 +1,6 @@
-import { Code2 } from 'lucide-react'
+import { Code2, ExternalLink } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { FaGithub } from 'react-icons/fa'
 import { PROJECTS } from '../../data/resume'
 import { Reveal } from '../ui/Reveal'
 import { Section } from '../ui/Section'
@@ -8,6 +9,7 @@ import { Tag } from '../ui/Tag'
 interface ProjectEntry {
   title: string
   desc: string
+  highlights: string[]
 }
 
 export function Projects() {
@@ -24,7 +26,7 @@ export function Projects() {
             return null
           }
           return (
-            <Reveal key={entry.title} delay={index * 0.07}>
+            <Reveal key={entry.title} delay={index * 0.07} className="h-full">
               <article className="group flex h-full flex-col border border-line bg-card p-5 transition-colors hover:border-signal">
                 <div className="flex items-center justify-between">
                   <span className="flex h-10 w-10 items-center justify-center border border-line text-signal transition-colors group-hover:border-signal">
@@ -37,7 +39,15 @@ export function Projects() {
                 <h3 className="mt-5 font-display text-lg font-medium tracking-tight">
                   {entry.title}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{entry.desc}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{entry.desc}</p>
+                <ul className="mt-3 flex-1 space-y-1.5 text-sm leading-relaxed text-muted">
+                  {entry.highlights.map((highlight) => (
+                    <li key={highlight} className="relative pl-3.5">
+                      <span className="absolute top-[0.6em] left-0 h-1 w-1 bg-signal" aria-hidden />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {meta.tags.map((tag) => (
                     <li key={tag}>
@@ -45,6 +55,34 @@ export function Projects() {
                     </li>
                   ))}
                 </ul>
+                {(meta.repo ?? meta.demo) && (
+                  <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-line pt-3">
+                    {meta.repo && (
+                      <a
+                        href={meta.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${entry.title} ${t('projects.repo')}`}
+                        className="inline-flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-signal"
+                      >
+                        <FaGithub className="h-3.5 w-3.5" aria-hidden />
+                        {t('projects.repo')}
+                      </a>
+                    )}
+                    {meta.demo && (
+                      <a
+                        href={meta.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${entry.title} ${t('projects.demo')}`}
+                        className="inline-flex items-center gap-1.5 text-xs text-muted transition-colors hover:text-signal"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                        {t('projects.demo')}
+                      </a>
+                    )}
+                  </div>
+                )}
               </article>
             </Reveal>
           )

@@ -5,7 +5,7 @@ export interface TimelineEntry {
   period: string
   title: string
   subtitle?: string
-  description?: string
+  description?: string | readonly string[]
   tags?: readonly string[]
 }
 
@@ -22,10 +22,25 @@ export function Timeline({ entries }: { entries: readonly TimelineEntry[] }) {
             <p className="readout text-xs tracking-wide text-muted">{entry.period}</p>
             <h3 className="mt-1 font-display text-xl font-medium tracking-tight">{entry.title}</h3>
             {entry.subtitle && <p className="mt-0.5 text-sm text-muted">{entry.subtitle}</p>}
-            {entry.description && (
+            {typeof entry.description === 'string' ? (
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
                 {entry.description}
               </p>
+            ) : (
+              entry.description &&
+              entry.description.length > 0 && (
+                <ul className="mt-3 max-w-2xl space-y-1.5 text-sm leading-relaxed text-muted">
+                  {entry.description.map((line) => (
+                    <li key={line} className="relative pl-4">
+                      <span
+                        className="absolute top-[0.55em] left-0 h-1 w-1 bg-signal"
+                        aria-hidden
+                      />
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+              )
             )}
             {entry.tags && entry.tags.length > 0 && (
               <ul className="mt-3 flex flex-wrap gap-2">

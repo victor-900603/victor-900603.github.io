@@ -14,7 +14,7 @@ export function Expertise() {
   const items = t('expertise.items', { returnObjects: true }) as Record<string, ExpertiseItem>
 
   return (
-    <Section id="expertise" index={6} icon={LineChart} titleKey="expertise.title">
+    <Section id="expertise" index={7} icon={LineChart} titleKey="expertise.title">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {EXPERTISE_ORDER.map((key, index) => {
           const item = items[key]
@@ -23,7 +23,7 @@ export function Expertise() {
             return null
           }
           return (
-            <Reveal key={key} delay={index * 0.06}>
+            <Reveal key={key} delay={index * 0.06} className="h-full">
               <article className="group h-full border border-line bg-card p-5 transition-colors hover:border-signal">
                 <span className="flex h-10 w-10 items-center justify-center border border-line text-signal transition-colors group-hover:border-signal">
                   <Icon className="h-5 w-5" aria-hidden />

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { calculateAge, clamp, cn, padIndex } from './utils'
+import { calculateAge, clamp, cn, externalLinkAttrs, padIndex } from './utils'
 
 describe('calculateAge', () => {
   it('counts full years on the birthday', () => {
@@ -37,5 +37,18 @@ describe('padIndex', () => {
   it('pads single digits to two characters', () => {
     expect(padIndex(1)).toBe('01')
     expect(padIndex(12)).toBe('12')
+  })
+})
+
+describe('externalLinkAttrs', () => {
+  it('opens http links in a new tab safely', () => {
+    expect(externalLinkAttrs('https://example.com')).toEqual({
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    })
+  })
+
+  it('keeps mailto links in the same tab', () => {
+    expect(externalLinkAttrs('mailto:victor@example.com')).toEqual({})
   })
 })

@@ -26,3 +26,12 @@ export function clamp(value: number, min: number, max: number): number {
 export function padIndex(value: number): string {
   return String(value).padStart(2, '0')
 }
+
+export interface ExternalLinkAttrs {
+  target?: '_blank'
+  rel?: 'noopener noreferrer'
+}
+
+export function externalLinkAttrs(href: string): ExternalLinkAttrs {
+  return href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {}
+}

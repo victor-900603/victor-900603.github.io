@@ -1,53 +1,46 @@
-import type { LucideIcon } from 'lucide-react'
-import { Database, Palette, Terminal, Wrench } from 'lucide-react'
+import { Wrench } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { SKILL_CATEGORIES } from '../../data/resume'
 import { Reveal } from '../ui/Reveal'
 import { Section } from '../ui/Section'
-import { SkillBar } from '../ui/SkillBar'
-
-const CATEGORY_ICONS: Record<string, LucideIcon> = {
-  languages: Terminal,
-  frontend: Palette,
-  database: Database,
-  tools: Wrench,
-}
+import { Tag } from '../ui/Tag'
 
 export function Skills() {
   const { t } = useTranslation()
 
   return (
-    <Section id="skill" index={5} icon={Wrench} titleKey="skill.title">
-      <div className="grid gap-10">
-        {SKILL_CATEGORIES.map((category, categoryIndex) => {
-          const Icon = CATEGORY_ICONS[category.key] ?? Wrench
+    <Section id="skill" index={6} icon={Wrench} titleKey="skill.title">
+      <div className="grid gap-4 sm:grid-cols-2">
+        {SKILL_CATEGORIES.map((category, index) => {
+          const Icon = category.icon
+          const featured = category.key === 'genai'
           return (
-            <Reveal key={category.key} delay={categoryIndex * 0.06}>
-              <div>
+            <Reveal
+              key={category.key}
+              delay={index * 0.05}
+              className={featured ? 'h-full sm:col-span-2' : 'h-full'}
+            >
+              <article
+                className={
+                  featured
+                    ? 'h-full border border-signal bg-card p-5'
+                    : 'h-full border border-line bg-card p-5 transition-colors hover:border-signal'
+                }
+              >
                 <h3 className="mb-4 flex items-center gap-2 border-b border-line pb-3">
                   <Icon className="h-4 w-4 text-signal" aria-hidden />
                   <span className="font-display text-lg font-medium">{t(category.labelKey)}</span>
                 </h3>
-                <ul className="grid gap-x-10 gap-y-5 sm:grid-cols-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <li key={skill.name}>
-                      <div className="flex items-center gap-3">
-                        <img
-                          src={skill.icon}
-                          alt=""
-                          className="h-6 w-6 object-contain"
-                          loading="lazy"
-                        />
-                        <span className="text-sm font-medium text-ink">{skill.name}</span>
-                        <span className="readout ml-auto text-xs text-muted">{skill.level}</span>
-                      </div>
-                      <div className="mt-2">
-                        <SkillBar level={skill.level} delay={skillIndex * 0.05} />
-                      </div>
+                <ul className="flex flex-wrap gap-2">
+                  {category.tags.map((tag) => (
+                    <li key={tag}>
+                      <Tag className={featured ? 'px-2.5 py-1 text-xs text-ink' : undefined}>
+                        {tag}
+                      </Tag>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </article>
             </Reveal>
           )
         })}

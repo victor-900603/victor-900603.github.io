@@ -6,6 +6,7 @@ import { Loader } from './components/layout/Loader'
 import { ScrollProgress } from './components/layout/ScrollProgress'
 import { TerminalRail } from './components/layout/TerminalRail'
 import { TopBar } from './components/layout/TopBar'
+import { Awards } from './components/sections/Awards'
 import { Certificates } from './components/sections/Certificates'
 import { Contact } from './components/sections/Contact'
 import { Education } from './components/sections/Education'
@@ -41,6 +42,7 @@ export default function App() {
           <Education />
           <Internships />
           <Projects />
+          <Awards />
           <Certificates />
           <Skills />
           <Expertise />

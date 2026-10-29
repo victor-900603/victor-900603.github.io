@@ -1,7 +1,6 @@
-import { Mail } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { PROFILE, SOCIAL_LINKS } from '../../data/resume'
-import { cn } from '../../lib/utils'
+import { SOCIAL_LINKS } from '../../data/resume'
+import { cn, externalLinkAttrs } from '../../lib/utils'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -17,8 +16,7 @@ export function Footer() {
               <li key={link.key}>
                 <a
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...externalLinkAttrs(link.href)}
                   aria-label={link.label}
                   className={cn(
                     'inline-flex h-9 w-9 items-center justify-center border border-line bg-card text-muted',
@@ -30,18 +28,6 @@ export function Footer() {
               </li>
             )
           })}
-          <li>
-            <a
-              href={`mailto:${PROFILE.email}`}
-              aria-label="Email"
-              className={cn(
-                'inline-flex h-9 w-9 items-center justify-center border border-line bg-card text-muted',
-                'transition-colors hover:border-signal hover:text-signal',
-              )}
-            >
-              <Mail className="h-4 w-4" aria-hidden />
-            </a>
-          </li>
         </ul>
       </div>
     </footer>

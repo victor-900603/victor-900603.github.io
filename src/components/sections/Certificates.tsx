@@ -9,7 +9,7 @@ export function Certificates() {
   const items = t('certificate.items', { returnObjects: true }) as string[]
 
   return (
-    <Section id="certificate" index={4} icon={Award} titleKey="certificate.title">
+    <Section id="certificate" index={5} icon={Award} titleKey="certificate.title">
       <Reveal>
         <p className="eyebrow mb-4 text-faint">{t('certificate.category')}</p>
         <ul className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2">

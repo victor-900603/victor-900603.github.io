@@ -3,6 +3,7 @@ import { ArrowRightLeft } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { PORTRAITS, SOCIAL_LINKS } from '../../data/resume'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { externalLinkAttrs } from '../../lib/utils'
 import { IconButton } from '../ui/IconButton'
 
 type PortraitMode = 'formal' | 'casual'
@@ -37,8 +38,7 @@ export function PortraitCard({ alt }: { alt: string }) {
                 <li key={link.key}>
                   <a
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...externalLinkAttrs(link.href)}
                     aria-label={link.label}
                     className="inline-flex h-8 w-8 items-center justify-center border border-white/30 bg-black/20 text-white transition-colors hover:border-white hover:text-white"
                   >

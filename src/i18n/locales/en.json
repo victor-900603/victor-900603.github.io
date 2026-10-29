@@ -4,6 +4,7 @@
     "education": "Education",
     "internships": "Experience",
     "projects": "Projects",
+    "awards": "Awards",
     "certificate": "Certificate",
     "skill": "Skill",
     "expertise": "Expertise",
@@ -19,7 +20,7 @@
   },
   "hero": {
     "eyebrow": "PORTFOLIO",
-    "status": "Open to data science / machine learning opportunities"
+    "status": "GenAI Engineer / Data Scientist / Machine Learning Engineer"
   },
   "about": {
     "name": "Yu-Wei Chen",
@@ -30,19 +31,37 @@
     "eduLabel": "Education",
     "eduValue": "NYCU – M.S. in Information Management & Finance",
     "codingLabel": "Tech Skills",
-    "codingValue": "Data Analysis, Machine Learning, Web Crawling, Web Development, Database",
+    "codingValue": "Generative AI, Data Engineering, Full-Stack Development, Cloud Architecture",
     "financeLabel": "Finance",
     "financeValue": "Financial Statement Analysis, Portfolio Management, Derivatives",
     "goalLabel": "Goal",
-    "goalValue": "Data Scientist / ML Engineer / FinTech",
+    "goalValue": "In the era of booming AI, starting from needs analysis to solve real-world problems with GenAI and data science",
     "scrollHint": "Scroll Down",
     "portraitToggle": "Switch photo",
     "taglines": [
-      "Data Science × Finance",
+      "GenAI Engineer",
+      "Data Scientist",
       "Machine Learning Engineer",
-      "Full-Stack Developer",
-      "FinTech Enthusiast"
-    ]
+      "Full-Stack Developer"
+    ],
+    "bio": {
+      "lede": "Starting from the business logic of finance, I use software engineering to turn problems into shippable systems.",
+      "cards": [
+        {
+          "title": "Cross-Disciplinary Background",
+          "desc": "A finance master's paired with an IT background, holding a bookkeeper license and multiple finance certifications while building generative AI and full-stack systems."
+        },
+        {
+          "title": "Hands-on Experience",
+          "desc": "Proactively taking on industry projects during studies, actively seeking cross-domain internships and development roles, and thriving on fast context switches to sharpen problem decomposition and reliable delivery."
+        },
+        {
+          "title": "Career Vision",
+          "desc": "Aiming to keep understanding needs, defining problems clearly, and building solutions that are easy to use, maintainable, and go further to create real value."
+        }
+      ],
+      "chips": ["Problem Framing", "System Design", "Generative AI", "Reliable Delivery"]
+    }
   },
   "education": {
     "title": "Education",
@@ -51,7 +70,7 @@
         "period": "2025 / 09 - Present",
         "name": "National Yang Ming Chiao Tung University",
         "dept": "M.S., Information Management & Finance",
-        "tags": ["Finance", "Data Science"]
+        "tags": ["Finance", "Generative AI"]
       },
       {
         "period": "2020 / 09 - 2024 / 06",
@@ -68,59 +87,152 @@
         "period": "2026 / 07 - Present",
         "name": "KGI Bank",
         "role": "Summer Intern",
-        "desc": "Led a 0-to-1 customer self-service support tool, turning lengthy PDF manuals into a lightweight Chrome extension; designed a RAG support pipeline and built a custom navigation engine with React 19 and driver.js to cut inbound support requests.",
-        "tags": ["React", "Chrome Extension", "RAG", "JavaScript", "Python", "Project Management"]
+        "highlights": [
+          "Identified operational pain points in the corporate cash flow and account platform, then initiated and independently delivered a 0-to-1 self-service support tool that turns long PDF manuals into a lightweight Chrome extension.",
+          "Led a multimodal RAG pipeline over illustrated manuals, combining LayoutLM layout analysis with VLM image captioning to fix the spatial and step-order loss of traditional OCR.",
+          "Built a navigation engine with React 19 and driver.js, covering state recovery across page reloads, multi-node overlay tracking, and input focus protection to reduce inbound support requests."
+        ],
+        "tags": ["React", "RAG", "Chrome Extension", "Python", "LayoutLM"]
       },
       {
         "period": "2025 / 10 - Present",
         "name": "ShenYi Autonomous Health Co., Ltd.",
         "role": "Part-time Full-Stack Engineer",
-        "desc": "Independently led two Vue.js frontends with a Django backend, designing and implementing 80+ RESTful APIs (payments, membership, RBAC, JWT); built and operated five core microservices on AWS and governed IAM and GitHub permissions.",
+        "highlights": [
+          "Independently delivered two Vue.js frontends and a Django backend, designing and implementing 80+ RESTful APIs across payments, membership, RBAC, and JWT authentication.",
+          "Built and operated five core microservices on AWS, improving availability and response time through service decomposition and traffic distribution.",
+          "Acted as the cross-project technical liaison, aligning API contracts and system dependencies while enforcing least privilege across AWS IAM and GitHub organization permissions.",
+          "Integrated the LINE Messaging API for automated messaging and maintained the WordPress corporate site and SEO configuration."
+        ],
         "tags": ["Vue.js", "Django", "RESTful API", "AWS", "RDBMS", "Git"]
       },
       {
         "period": "2024 / 04 - 2024 / 10",
         "name": "Institute for Information Industry (III)",
         "role": "Part-time Developer",
-        "desc": "Built an internal finance knowledge chat platform with React and Express, integrating business APIs and a knowledge base for document retrieval, access control, and conversation history; modeled high-concurrency records in MongoDB and containerized deployment with Docker.",
+        "highlights": [
+          "Built an internal finance knowledge chat platform with React and Express, integrating business APIs and a knowledge base for document retrieval, access control, and conversation history.",
+          "Modeled high-concurrency conversation data in MongoDB with paginated queries, and standardized deployment environments with Docker."
+        ],
         "tags": ["React", "Express", "MongoDB", "Docker"]
       },
       {
         "period": "2023 / 11 - 2024 / 09",
         "name": "BigData Software Co., Ltd.",
         "role": "Web Crawler Intern",
-        "desc": "Scaled distributed crawling across 100+ news and blog sites, implementing dynamic proxy pools, header rotation, and exponential-backoff retries to bypass anti-bot defenses; designed an end-to-end ETL pipeline and exposed the data through a low-latency RESTful API.",
+        "highlights": [
+          "Operated a distributed crawling architecture across 100+ news and blog sites, sustaining tens of thousands of text records per day.",
+          "Implemented dynamic proxy pools, request header rotation, and exponential backoff retries to bypass IP blocking and rate limiting.",
+          "Built a Pandas ETL pipeline for text cleaning, missing values, and schema standardization, exposing the results through a low-latency RESTful API."
+        ],
         "tags": ["Python", "Web Crawling", "ETL", "RESTful API", "Git"]
       },
       {
         "period": "2023 / 07 - 2023 / 08",
         "name": "Institute for Information Industry (III)",
         "role": "Intern",
-        "desc": "Built an internal AI chat module on WordPress by integrating the OpenAI Chat API with PHP; developed a dynamic Selenium crawler to extract company data, and researched FinTech accelerators and ESG trends.",
+        "highlights": [
+          "Built an internal AI chat module on a WordPress site, integrating the OpenAI Chat API with PHP and streaming responses to the frontend.",
+          "Developed a dynamic Selenium crawler to extract company data and established a cleaning pipeline.",
+          "Researched FinTech accelerators and ESG trends, producing reports used for park strategy planning."
+        ],
         "tags": ["PHP", "WordPress", "JavaScript", "Python", "Web Crawling"]
       }
     ]
   },
   "projects": {
     "title": "Projects",
+    "repo": "Code",
+    "demo": "Live Demo",
     "entries": [
       {
-        "title": "Web Crawler Framework",
-        "desc": "A Python-based web crawler framework supporting both synchronous and asynchronous crawling. Configurable for individual websites through settings files, and supports multiple storage options."
+        "title": "FinNexus – Financial RAG Search & QA",
+        "desc": "A full-stack financial QA service covering filing ingestion, regulation parsing, and hybrid retrieval, with FastAPI as the RAG control plane.",
+        "highlights": [
+          "Orchestrated idempotent ingestion of MOPS filings, MinerU PDF parsing, and regulation data with parent-child and article-level chunking.",
+          "Built BGE-M3 dense and sparse hybrid indexes in Qdrant with RRF fusion, Cross-Encoder reranking, and intent-based routing.",
+          "Answers are grounded in retrieved content with document, page, and article citations, and are refused when evidence is insufficient."
+        ]
       },
       {
-        "title": "Discord Music Bot",
-        "desc": "A music bot built with FastAPI and Discord SDK, integrating YouTube Search API and featuring a React frontend for web-based control."
+        "title": "FinCortex – Investment Research Decision Engine",
+        "desc": "A LangGraph system orchestrating five agents: planner, tool_caller, critic, arbitrator, and synthesizer.",
+        "highlights": [
+          "Replaced linear ReAct with Plan-and-Execute plus Critic Reflection, bounded by triple limits so every branch converges.",
+          "Arbitrates conflicts between cold and hot data with a time-decay model, computing all numbers in a restricted Python sandbox.",
+          "Persists graph state in a Postgres checkpointer for multi-turn conversations and node-level resumption."
+        ]
       },
       {
-        "title": "RAG System",
-        "desc": "Developed a Retrieval-Augmented Generation (RAG) system using Langchain and a Django backend."
+        "title": "Web Harvester – Config-Driven Crawler Engine",
+        "desc": "A crawler system that decouples site rules from the scheduling engine through declarative configuration and modular design.",
+        "highlights": [
+          "YAML rules validated by JSON Schema, so new sites require configuration changes only.",
+          "Simulates browser TLS fingerprints with curl_cffi and retries with exponential backoff for stable collection.",
+          "Ships with ETL cleaning and multiple storage backends to normalize heterogeneous sources."
+        ]
+      },
+      {
+        "title": "Discord Music Bot – Cross-Platform Streaming Control",
+        "desc": "A music streaming service integrating Discord voice with a React web dashboard, using FastAPI as the central control hub.",
+        "highlights": [
+          "Connects Discord.py with a React frontend through RESTful APIs and a custom playback queue for two-way sync.",
+          "Implements Discord OAuth2 and JWT verification to manage identity and personal playlists.",
+          "Containerizes the Vite SPA and backend with Docker Compose for one-command deployment."
+        ]
+      },
+      {
+        "title": "Taiwan Takoyaki Price Index",
+        "desc": "An interactive map of takoyaki prices across Taiwan built with React, TypeScript, and D3.js.",
+        "highlights": [
+          "Combines store prices, locations, and administrative statistics with city and district level views.",
+          "Designs price normalization and statistics, showing color scales, means, medians, and sample sizes.",
+          "Covered by Vitest unit tests with type checking and linting, deployed on GitHub Pages."
+        ]
+      },
+      {
+        "title": "DevColor Inspector – Color Analysis Extension",
+        "desc": "A Chrome extension for color picking and analysis built with React, TypeScript, and Manifest V3.",
+        "highlights": [
+          "Offers EyeDropper picking, HEX / RGB input, and OKLCH scale generation.",
+          "Uses culori for multi-format conversion and exports CSS Variables, Tailwind tokens, and JSON.",
+          "Manages settings and color history with chrome.storage, with bilingual UI and dark/light themes."
+        ]
+      }
+    ]
+  },
+  "awards": {
+    "title": "Awards",
+    "entries": [
+      {
+        "year": "2023",
+        "title": "Uni-President Group Business Competition",
+        "award": "3rd Place",
+        "desc": "Proposed a solution to improve store recruitment effectiveness amid the labor shortage."
+      },
+      {
+        "year": "2022",
+        "title": "Campus Securities Investment Championship",
+        "award": "Champion",
+        "desc": "Deepened knowledge of financial products, market structure, and securities regulations."
+      },
+      {
+        "year": "2022",
+        "title": "National College Wealth Management Competition (12th)",
+        "award": "Honorable Mention",
+        "desc": "Applied investment and financial management knowledge to practical planning and asset allocation."
+      },
+      {
+        "year": "2019",
+        "title": "Taiwan School Cyberfair",
+        "award": "Gold Award",
+        "desc": "Built a static site with HTML and CSS introducing local food and landmarks in Banqiao."
       }
     ]
   },
   "certificate": {
     "title": "Certificates",
-    "category": "Finance & Accounting",
+    "category": "Finance, Accounting & AI",
     "items": [
       "Certified Bookkeeper (National Exam)",
       "Senior Securities Specialist",
@@ -129,16 +241,21 @@
       "Futures Specialist",
       "Trust Operations Specialist",
       "FinTech Knowledge Certification",
-      "Financial Market Ethics"
+      "Financial Market Ethics",
+      "AI Application Planner (Intermediate)",
+      "AI Application Planner (Beginner)"
     ]
   },
   "skill": {
     "title": "Skills",
     "categories": {
+      "genai": "Generative AI (RAG / AI Agent)",
       "languages": "Languages",
+      "backend": "Backend & API",
       "frontend": "Frontend",
-      "database": "Databases",
-      "tools": "Tools"
+      "data": "Data Engineering & ML",
+      "database": "Databases & Cache",
+      "cloud": "Cloud & DevOps"
     }
   },
   "expertise": {
@@ -146,19 +263,19 @@
     "items": {
       "finance": {
         "title": "Financial Analysis",
-        "desc": "Knowledge in financial statement analysis, portfolio theory, and derivatives. Holds multiple financial licenses, bridging data and finance."
+        "desc": "Knowledge in financial statement analysis, portfolio theory, and derivatives, holding a bookkeeper license and multiple finance certifications to bridge data and finance."
       },
       "fullstack": {
         "title": "Full-Stack & API Architecture",
-        "desc": "End-to-end delivery experience across Python backends (Django / FastAPI / DRF) and modern frontends (Vue / React), proficient in RESTful API design, JWT / RBAC access control, and data modeling."
+        "desc": "End-to-end delivery across Django / DRF / FastAPI backends and Vue / React frontends, with RESTful API design, JWT / RBAC access control, and data modeling."
       },
       "rag": {
         "title": "Generative AI (Agent / RAG)",
-        "desc": "Builds ReAct-style agent flows with LangGraph and designs RAG retrieval pipelines with LangChain (section-aware chunking, query rewriting, hybrid BM25 plus vector search, Cross-Encoder reranking) that return accurate answers with source page citations."
+        "desc": "Orchestrates multi-agent flows with LangGraph and designs hybrid retrieval RAG with LangChain: section-aware chunking, query rewriting, BM25 plus vector search, Cross-Encoder reranking, and strict citations that return source pages and refuse when evidence is insufficient."
       },
       "cloud": {
         "title": "Cloud, Databases & DevOps",
-        "desc": "Plans and operates microservice architectures on AWS (EC2 / ECS / S3 / RDS / API Gateway), familiar with Docker, Git workflows, and CI/CD, applying least-privilege (PoLP) IAM access control."
+        "desc": "Plans and operates microservice architectures on AWS, familiar with Docker, Git workflows, and CI/CD, applying least-privilege (PoLP) IAM access control."
       },
       "crawler": {
         "title": "Distributed Data Engineering & Web Scraping",
@@ -168,9 +285,10 @@
   },
   "contact": {
     "title": "Contact Me",
-    "lede": "Interested in data, models, or fintech? Reach out through the channels below.",
+    "lede": "Interested in generative AI, data, or fintech? Reach out through the channels below.",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "email": "Email"
   },
   "footer": {
     "copyright": "© 2024 - 2026 Victor Chen. All Rights Reserved."

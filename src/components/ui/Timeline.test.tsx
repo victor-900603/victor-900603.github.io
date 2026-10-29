@@ -27,4 +27,21 @@ describe('Timeline', () => {
     expect(screen.getByText('TypeScript')).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 3, name: 'Second role' })).toBeInTheDocument()
   })
+
+  it('renders a bullet list when the description is an array', () => {
+    render(
+      <Timeline
+        entries={[
+          {
+            period: '2026 - now',
+            title: 'Role with highlights',
+            description: ['First highlight', 'Second highlight'],
+          },
+        ]}
+      />,
+    )
+
+    expect(screen.getByText('First highlight').tagName).toBe('LI')
+    expect(screen.getByText('Second highlight').tagName).toBe('LI')
+  })
 })

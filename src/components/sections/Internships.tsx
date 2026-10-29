@@ -7,7 +7,7 @@ interface InternshipEntry {
   period: string
   name: string
   role: string
-  desc: string
+  highlights: string[]
   tags: string[]
 }
 
@@ -19,7 +19,7 @@ export function Internships() {
     period: entry.period,
     title: entry.name,
     subtitle: entry.role,
-    description: entry.desc,
+    description: entry.highlights,
     tags: entry.tags,
   }))
 

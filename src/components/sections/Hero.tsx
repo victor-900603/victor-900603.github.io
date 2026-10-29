@@ -6,6 +6,7 @@ import { PROFILE } from '../../data/resume'
 import { useTypewriter } from '../../hooks/useTypewriter'
 import { calculateAge } from '../../lib/utils'
 import { ParticleField } from '../ui/ParticleField'
+import { Tag } from '../ui/Tag'
 import { PortraitCard } from './PortraitCard'
 
 interface LedgerRow {
@@ -15,11 +16,18 @@ interface LedgerRow {
   mono?: boolean
 }
 
+interface BioContent {
+  lede: string
+  cards: { title: string; desc: string }[]
+  chips: string[]
+}
+
 export function Hero() {
   const { t } = useTranslation()
 
   const taglines = t('about.taglines', { returnObjects: true }) as string[]
   const typed = useTypewriter(taglines)
+  const bio = t('about.bio', { returnObjects: true }) as BioContent
 
   const age = useMemo(() => calculateAge(PROFILE.birthDate), [])
 
@@ -91,6 +99,27 @@ export function Hero() {
         >
           <PortraitCard alt={t('about.name')} />
         </motion.div>
+      </div>
+
+      <div className="relative mx-auto max-w-5xl px-6 pb-8 md:px-10">
+        <p className="max-w-2xl border-l-2 border-signal pl-4 text-sm leading-relaxed text-ink md:text-base">
+          {bio.lede}
+        </p>
+        <ul className="mt-6 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
+          {bio.cards.map((card) => (
+            <li key={card.title} className="bg-card p-5">
+              <h2 className="font-display text-base font-medium tracking-tight">{card.title}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{card.desc}</p>
+            </li>
+          ))}
+        </ul>
+        <ul className="mt-4 flex flex-wrap gap-2">
+          {bio.chips.map((chip) => (
+            <li key={chip}>
+              <Tag>{chip}</Tag>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="readout relative mx-auto flex max-w-5xl items-center justify-center gap-2 px-6 pb-12 text-[10px] tracking-[0.3em] text-faint md:px-10">
